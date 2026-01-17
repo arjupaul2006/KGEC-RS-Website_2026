@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 
 interface AnimatedHeadingProps {
 	text: string;
@@ -9,17 +9,33 @@ interface AnimatedHeadingProps {
 	delay?: number;
 }
 
+// const letterVariants = {
+// 	hidden: { opacity: 0, y: 20 },
+// 	visible: (i: number) => ({
+// 		opacity: 1,
+// 		y: 0,
+// 		transition: {
+// 			duration: 0.6,
+// 			delay: i * 0.04,
+// 			ease: [0.2, 0.9, 0.2, 1],
+// 		},
+// 	}),
+// };
+
 const letterVariants = {
-	hidden: { opacity: 0, y: 20 },
-	visible: (i: number) => ({
-		opacity: 1,
-		y: 0,
-		transition: {
-			duration: 0.6,
-			delay: i * 0.04,
-			ease: [0.2, 0.9, 0.2, 1],
-		},
-	}),
+  hidden: { 
+	opacity: 0, 
+	y: 20 
+  },
+  visible: (i: number) => ({
+	opacity: 1,
+	y: 0,
+	transition: {
+	  duration: 0.6,
+	  delay: i * 0.05,
+	  ease: easeOut,
+	},
+  }),
 };
 
 const baseClasses = {
