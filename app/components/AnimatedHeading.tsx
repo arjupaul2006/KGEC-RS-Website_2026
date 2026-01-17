@@ -39,7 +39,7 @@ const letterVariants = {
 };
 
 const baseClasses = {
-	h1: 'text-5xl md:text-6xl font-bold',
+	h1: 'text-3xl md:text-6xl font-bold',
 	h2: 'text-4xl font-bold',
 	h3: 'text-2xl font-bold',
 };

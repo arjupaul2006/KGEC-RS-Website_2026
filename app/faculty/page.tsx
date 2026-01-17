@@ -23,13 +23,13 @@ const itemVariants = {
 export default function Faculty() {
 	return (
 		<div className="relative min-h-screen bg-gradient-to-b from-[#071021] via-[#081226] to-[#04121a]">
-			<div className="relative max-w-7xl mx-auto px-4 py-16">
-				<AnimatedHeading text="OUR FACULTY BODY" level="h1" className="text-white text-center mb-2" />
+			<div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-12 md:py-16">
+				<AnimatedHeading text="OUR FACULTY BODY" level="h1" className="text-white text-center text-2xl sm:text-3xl md:text-2xl mb-2" />
 				<motion.p
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.4, duration: 0.6 }}
-					className="text-center text-slate-300 mb-12"
+					className="text-center text-slate-300 mb-8 sm:mb-12 text-sm sm:text-base"
 				>
 					Leaders, mentors, and advisors
 				</motion.p>
@@ -38,22 +38,23 @@ export default function Faculty() {
 					variants={containerVariants}
 					initial="hidden"
 					animate="visible"
-					className="space-y-6"
+					className="space-y-4 sm:space-y-6"
 				>
 					{faculty.map((f) => (
 						<motion.div
 							key={f.name}
 							variants={itemVariants}
 							whileHover={{ x: 8, scale: 1.01 }}
-							className="bg-white/2 border border-white/6 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm flex items-center gap-6"
+							whileTap={{ scale: 0.98 }}
+							className="bg-white/2 border border-white/6 rounded-2xl p-4 sm:p-6 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6"
 						>
-							<div className="h-24 w-24 rounded-xl bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 border border-white/10 flex-shrink-0" />
-							<div className="flex-1">
-								<div className="font-semibold text-white text-lg">{f.name}</div>
-								<div className="text-sm text-slate-400 mb-2">{f.role}</div>
-								<p className="text-sm text-slate-300">Leaders and mentors guiding the future of robotics innovation.</p>
+							<div className="h-20 w-20 sm:h-24 sm:w-24 rounded-xl bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 border border-white/10 flex-shrink-0" />
+							<div className="flex-1 text-center sm:text-left">
+								<div className="font-semibold text-white text-base sm:text-lg">{f.name}</div>
+								<div className="text-xs sm:text-sm text-slate-400 mb-2">{f.role}</div>
+								<p className="text-xs sm:text-sm text-slate-300">Leaders and mentors guiding the future of robotics innovation.</p>
 							</div>
-							<button className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-sm hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 flex-shrink-0">
+							<button className="w-full sm:w-auto px-3 sm:px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-xs sm:text-sm hover:shadow-lg hover:shadow-cyan-500/50 active:scale-95 transition-all duration-300 flex-shrink-0">
 								VIEW PROFILE
 							</button>
 						</motion.div>
