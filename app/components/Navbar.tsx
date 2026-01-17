@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react'
+import Image from "next/image";
 
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,7 +25,7 @@ export default function Navbar() {
 		<header className="sticky top-0 z-50 backdrop-blur-md border-b border-white/6 bg-gradient-to-b from-[rgba(255,255,255,0.02)] to-transparent">
 			<div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 				<button onClick={()=>{ setIsMenuOpen(false); router.push('/') }} aria-label="KGEC Robotics home" className="flex items-center gap-2">
-					<div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 shadow-md" />
+					<Image src="/logo.png" alt="KGEC Robotics Logo" width={32} height={32} className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 shadow-md" />
 					<span className="font-semibold text-white">KGEC Robotics Society</span>
 				</button>
 				
