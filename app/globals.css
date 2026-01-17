@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Hide Spline watermark */
+canvas + div {
+  display: none;
+}
+
