@@ -4,6 +4,8 @@ import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 import Animation from './Spline';
 import AnimatedHeading from './components/AnimatedHeading';
+import RobotScene from './Three';
+import { InteractiveRobotSpline } from './Robot/model';
 
 // Component to split text into individual letters for animation
 const AnimatedText = ({ text, className }: { text: string; className: string }) => {
@@ -95,6 +97,7 @@ const sampleEvents = [
 export default function Home() {
 	const sliderRef = useRef<HTMLDivElement>(null)
 	const autoScrollRef = useRef<number | null>(null)
+	const ROBOT_SCENE_URL = "https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode"
 
 	const scrollLeft = () => {
 		if (sliderRef.current) {
