@@ -40,7 +40,7 @@ export default function Faculty() {
 					animate="visible"
 					className="space-y-6"
 				>
-					{faculty.map((f, i) => (
+					{faculty.map((f) => (
 						<motion.div
 							key={f.name}
 							variants={itemVariants}

@@ -32,7 +32,6 @@ export default function AnimatedHeading({
 	text,
 	level = 'h2',
 	className = '',
-	delay = 0,
 }: AnimatedHeadingProps) {
 	const baseClass = baseClasses[level];
 	const combinedClass = `${baseClass} ${className}`;

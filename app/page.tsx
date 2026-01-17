@@ -4,22 +4,20 @@ import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 import Animation from './Spline';
 import AnimatedHeading from './components/AnimatedHeading';
-import RobotScene from './Three';
-import { InteractiveRobotSpline } from './Robot/model';
 
 // Component to split text into individual letters for animation
-const AnimatedText = ({ text, className }: { text: string; className: string }) => {
-	return (
-		<span className={`button-letters ${className}`}>
-			{text.split('').map((letter, index) => (
-				// set a custom property --i per letter so CSS can stagger via calc(var(--i) * ...)
-				<span key={index} style={{ ['--i' as any]: index }}>
-					{letter === ' ' ? '\u00A0' : letter}
-				</span>
-			))}
-		</span>
-	)
-}
+// const AnimatedText = ({ text, className }: { text: string; className: string }) => {
+// 	return (
+// 		<span className={`button-letters ${className}`}>
+// 			{text.split('').map((letter, index) => (
+// 				// set a custom property --i per letter so CSS can stagger via calc(var(--i) * ...)
+// 				<span key={index} style={{ ['--i' as any]: index }}>
+// 					{letter === ' ' ? '\u00A0' : letter}
+// 				</span>
+// 			))}
+// 		</span>
+// 	)
+// }
 
 // Simplified mouse effects - only binary code and inner dot
 const MouseEffects = () => {
@@ -97,7 +95,7 @@ const sampleEvents = [
 export default function Home() {
 	const sliderRef = useRef<HTMLDivElement>(null)
 	const autoScrollRef = useRef<number | null>(null)
-	const ROBOT_SCENE_URL = "https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode"
+	// const ROBOT_SCENE_URL = "https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode"
 
 	const scrollLeft = () => {
 		if (sliderRef.current) {
