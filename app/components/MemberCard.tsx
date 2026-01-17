@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from 'framer-motion'
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import path from 'path';
 
 type SocialLinks = {
 	linkedin?: string
@@ -13,7 +14,7 @@ interface MemberCardProps {
 	name: string
 	role?: string
 	domain?: string
-	imageUrl?: string
+	imageUrl?: StaticImageData
 	socials?: SocialLinks
 }
 
@@ -25,9 +26,9 @@ export default function MemberCard({ name, role, domain, imageUrl, socials }: Me
 			className="relative overflow-hidden rounded-2xl border border-white/6 bg-white/2 shadow-lg backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300"
 		>
 			<div className="p-5">
-				<div className="h-36 w-full rounded-xl bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 flex items-center justify-center border border-white/10">
+				<div className="h-36 w-full rounded-xl ">
 					{imageUrl ? (
-						<Image src={imageUrl} alt={name} className="h-full w-full object-cover rounded-xl" />
+						<Image src={imageUrl} alt={name} className="h-full w-full object-contain rounded-xl" />
 					) : (
 						<div className="h-16 w-16 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-400 to-purple-400" />
 					)}
