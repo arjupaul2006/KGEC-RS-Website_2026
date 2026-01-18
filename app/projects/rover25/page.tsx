@@ -1,5 +1,7 @@
 import React from 'react';
 import { Rocket, ExternalLink, ShieldCheck, Cpu, GraduationCap, User, Info, Toolbox } from 'lucide-react';
+import Image from 'next/image';
+import dunerover2 from "../../../public/projects/dunerover2.jpg"
 
 export default function DuneRoverUI() {
   const personnel = [
@@ -62,16 +64,12 @@ export default function DuneRoverUI() {
             <div className="relative group h-full min-h-[400px]">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
               <div className="relative h-full bg-slate-900 rounded-[2.5rem] border border-slate-700 overflow-hidden shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&q=80&w=1200" 
+                <Image
+                  src={dunerover2}
                   alt="DuneRover Design" 
                   className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-6 right-6">
-                  <span className="bg-black/70 backdrop-blur-md text-[10px] px-4 py-2 rounded-full border border-white/20 uppercase font-black tracking-widest text-white">
-                    Design Concept
-                  </span>
-                </div>
+                
               </div>
             </div>
           </div>
