@@ -288,7 +288,7 @@ export default function Home() {
               {sampleEvents.map((event, index) => (
                 <article
                   key={index}
-                  className="min-w-64 sm:min-w-72 max-w-80 bg-gradient-to-b from-white/2 to-white/1 rounded-2xl p-4 border border-white/4 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all flex flex-col gap-2.5 scroll-snap-align-start"
+                  className="min-w-64 sm:min-w-72 max-w-80 bg-gradient-to-b from-white/5 to-white/2 rounded-2xl p-4 border border-white/4 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all flex flex-col gap-2.5 scroll-snap-align-start"
                   role="listitem"
                 >
                   <div className="flex justify-between items-center gap-2">
