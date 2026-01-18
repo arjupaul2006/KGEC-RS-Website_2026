@@ -28,8 +28,8 @@ export default function Navbar() {
 			<div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between">
 				<button onClick={()=>{ setIsMenuOpen(false); router.push('/') }} aria-label="KGEC Robotics home" className="flex items-center gap-1 sm:gap-2 active:scale-95 transition-transform">
 					<Image src={logo} alt="KGEC Robotics Logo" width={32} height={32} className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 rounded-lg bg-gradient-to-r from-purple-600 via-blue-600 to-green-600 shadow-md" />
-					<span className="font-semibold text-white text-xs sm:text-sm md:text-base hidden sm:inline">KGEC Robotics</span>
-					<span className="font-semibold text-white text-xs sm:text-sm md:text-base hidden md:inline">Society</span>
+					<span className="font-semibold text-white text-xs sm:text-sm md:text-base  sm:inline">KGEC Robotics</span>
+					<span className="font-semibold text-white text-xs sm:text-sm md:text-base md:inline">Society</span>
 				</button>
 				
 				{/* Desktop Navigation */}
