@@ -165,7 +165,7 @@ export default function Home() {
 
               <div className="flex gap-3 items-center mt-4 flex-col sm:flex-row">
                 <Link
-                  href="mailto:arjupaul2006@gmail.com"
+                  href="mailto:kgec.robotics.club@kgec.edu.in"
                   className="w-full sm:w-auto"
                 >
                   <motion.button
