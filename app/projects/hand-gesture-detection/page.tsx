@@ -1,5 +1,7 @@
 import React from 'react';
 import { Hand, Users, Code, Activity, Layers, Cpu } from 'lucide-react';
+import Image from 'next/image';
+import hand2 from "../../../public/projects/hand2.png"
 
 const HandGestureUI = () => {
   const teamMembers = ["Prantik Roy", "Soumodip Biswas"];
@@ -76,9 +78,9 @@ const HandGestureUI = () => {
               
               {/* MediaPipe Visual Placeholder */}
               <div className="h-2/3 w-full bg-slate-900 relative">
-                 <img 
-                   src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&q=80&w=800" 
-                   alt="MediaPipe skeleton detection visualization" 
+                 <Image
+                   src={hand2}
+                   alt="MediaPipe skeleton detection visualization"
                    className="w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"
                  />
                  <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[10px] font-bold text-white uppercase tracking-widest">

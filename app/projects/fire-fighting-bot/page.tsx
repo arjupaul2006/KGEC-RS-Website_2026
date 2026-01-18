@@ -1,5 +1,7 @@
 import React from 'react';
 import { Flame, Users, Cpu, Activity, ShieldAlert, Zap, Radio } from 'lucide-react';
+import firebot2 from "../../../public/projects/firebot2.jpg";
+import Image from 'next/image';
 
 const FireBotDashboard = () => {
   const teamMembers = ["Arju Paul", "Team Project Members"];
@@ -76,14 +78,12 @@ const FireBotDashboard = () => {
               
               {/* Image Section */}
               <div className="h-2/3 w-full bg-slate-900 relative">
-                 <img 
-                   src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800" 
+                 <Image 
+                   src={firebot2}
                    alt="Robotic Firefighter Prototype" 
                    className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
                  />
-                 <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[10px] font-bold text-white tracking-widest uppercase">
-                   Signal: ACTIVE
-                 </div>
+                 
               </div>
 
               {/* Status Display Area */}

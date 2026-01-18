@@ -1,5 +1,7 @@
 import React from 'react';
 import { Pill, Users, Cpu, Activity, Bell, Globe, Clock, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import medicine2 from "../../../public/projects/medicine2.png"
 
 const MedicineDispenserUI = () => {
   // Team members as identified in the provided documents
@@ -77,8 +79,8 @@ const MedicineDispenserUI = () => {
               
               {/* Device Image Placeholder */}
               <div className="h-2/3 w-full bg-slate-900 relative">
-                 <img 
-                   src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800" 
+                 <Image 
+                   src={medicine2}
                    alt="ESP32 Medicine Dispenser Hardware" 
                    className="w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"
                  />

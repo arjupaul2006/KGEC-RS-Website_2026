@@ -8,6 +8,11 @@ import Image from "next/image";
 import iroc_24 from "../../public/projects/iroc-24.png";
 import iroc_25 from "../../public/projects/iroc-25.png";
 import dunerover from "../../public/projects/dunerover.jpeg";
+import firebot1 from "../../public/projects/firebot1.jpg";
+import air1 from "../../public/projects/air1.png"
+import medicine1 from "../../public/projects/medicine1.png"
+import hand1 from "../../public/projects/hand1.jpeg"
+
 
 export default function Projects() {
   const [query, setQuery] = useState("");
@@ -53,7 +58,7 @@ export default function Projects() {
       year: "2025",
       team: ["Arju", "Swastik", "Sristy"],
       details: "/projects/air-quality-monitor",
-      img: iroc_24,
+      img: air1,
     },
     {
       title: "Automated Medicine Dispenser",
@@ -61,7 +66,7 @@ export default function Projects() {
       year: "2025",
       team: ["Eve", "Frank"],
       details: "/projects/automated-medicine",
-      img: iroc_24,
+      img: medicine1,
     },
     {
       title: "Fire Fighting Bot",
@@ -69,7 +74,7 @@ export default function Projects() {
       year: "2025",
       team: ["Eve", "Frank"],
       details: "/projects/fire-fighting-bot",
-      img: iroc_24,
+      img: firebot1,
     },
     {
       title: "Hand Gesture Detection",
@@ -77,7 +82,7 @@ export default function Projects() {
       year: "2025",
       team: ["Eve", "Frank"],
       details: "/projects/hand-gesture-detection",
-      img: iroc_24,
+      img: hand1,
     },
   ];
 
@@ -344,7 +349,7 @@ export default function Projects() {
                     <div
                       className={`relative h-32 sm:h-36 bg-gradient-to-br ${projectIndex % 3 === 0 ? "from-cyan-500/20 to-blue-500/20" : projectIndex % 3 === 1 ? "from-blue-500/20 to-purple-500/20" : "from-green-500/20 to-cyan-500/20"} rounded-lg border border-white/10`}
                     >
-                      <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4"/>
+                      {p.img && <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4"/>}
                     </div>
                     <div className="mt-4 font-semibold text-white text-sm sm:text-base">
                       {p.title}

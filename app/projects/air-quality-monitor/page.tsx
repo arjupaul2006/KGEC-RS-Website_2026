@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wind, Users, Cpu, Activity, AlertTriangle, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
-import air from "../../../public/projects/air.png"
+import air2 from "../../../public/projects/air2.jpeg"
 
 const AirQualityUI = () => {
   const teamMembers = ["Srishti Singh", "Swastik Sorkar", "Arju Paul"];
@@ -73,7 +73,7 @@ const AirQualityUI = () => {
             {/* Project Image Placeholder */}
             <div className="h-2/3 w-full bg-slate-800 relative overflow-hidden">
                <Image 
-                 src={air}
+                 src={air2}
                  alt="Sensors and Hardware" 
                  className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                />
