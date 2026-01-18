@@ -18,6 +18,10 @@ type SearchParams = {
   office?: string;
   office_hours?: string;
   biography?: string;
+  degrees?: string;
+  publications?: string;
+  linkedin?: string;
+  researchgate?: string;
 };
 
 export default function ClientTab({
@@ -25,15 +29,26 @@ export default function ClientTab({
 }: {
   searchParams: SearchParams;
 }) {
-
   const name = searchParams?.name ?? "";
   const role = searchParams?.role ?? "";
-  const image = searchParams?.image ? decodeURIComponent(searchParams.image) : "";
+  const image = searchParams?.image
+    ? decodeURIComponent(searchParams.image)
+    : "";
   const dept = searchParams?.dept ?? "";
   const email = searchParams?.email ?? "";
   const office = searchParams?.office ?? "";
-  const office_hours = searchParams?.office_hours ?? ""; 
+  const office_hours = searchParams?.office_hours ?? "";
   const biography = searchParams?.biography ?? "";
+  const degrees = searchParams.degrees ? JSON.parse(searchParams.degrees) : [];
+  const publications = searchParams.publications
+    ? JSON.parse(searchParams.publications)
+    : [];
+    const linkedin = searchParams?.linkedin
+    ? decodeURIComponent(searchParams.linkedin)
+    : "";
+    const researchgate = searchParams?.researchgate
+    ? decodeURIComponent(searchParams.researchgate)
+    : "";
 
 
   const [activeTab, setActiveTab] = useState<TabName>("Biography");
@@ -41,9 +56,26 @@ export default function ClientTab({
   return (
     <main className="min-h-screen bg-[#0f172a] pb-20">
       <Navbar />
-      <ProfileHeader name={name} role={role} image={image} dept={dept} email={email} office={office} office_hours={office_hours} />
+      <ProfileHeader
+        name={name}
+        role={role}
+        image={image}
+        dept={dept}
+        email={email}
+        office={office}
+        office_hours={office_hours}
+      />
       <TabMenu activeTab={activeTab} setActiveTab={setActiveTab} />
-      <TabContent activeTab={activeTab} biography={biography} />
+      <TabContent
+        activeTab={activeTab}
+        biography={biography}
+        degrees={degrees}
+        publications={publications}
+        email={email}
+        office={office}
+        linkedin={linkedin}
+        researchgate={researchgate}
+      />
     </main>
   );
 }
