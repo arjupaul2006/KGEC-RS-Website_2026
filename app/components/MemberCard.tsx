@@ -39,15 +39,21 @@ export default function MemberCard({ name, role, domain, imageUrl, socials }: Me
 					{domain ? <div className="text-sm text-cyan-300 mt-1">{domain}</div> : null}
 				</div>
 				<div className="mt-4 flex items-center justify-center gap-3">
-					<motion.a whileHover={{ scale: 1.2 }} aria-label="Email" href={socials?.email ? `mailto:${socials.email}` : '#'} className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-white/10 rounded-lg">
+				{socials?.email && socials.email.trim() && (
+					<motion.a whileHover={{ scale: 1.2 }} aria-label="Email" href={`mailto:${socials.email}`} className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-white/10 rounded-lg">
 						<MailIcon />
 					</motion.a>
-					<motion.a whileHover={{ scale: 1.2 }} aria-label="LinkedIn" href={socials?.linkedin ?? '#'} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-white/10 rounded-lg">
+				)}
+				{socials?.linkedin && socials.linkedin.trim() && (
+					<motion.a whileHover={{ scale: 1.2 }} aria-label="LinkedIn" href={socials.linkedin} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-white/10 rounded-lg">
 						<LinkedInIcon />
 					</motion.a>
-					<motion.a whileHover={{ scale: 1.2 }} aria-label="Facebook" href={socials?.facebook ?? '#'} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-white/10 rounded-lg">
+				)}
+				{socials?.facebook && socials.facebook.trim() && (
+					<motion.a whileHover={{ scale: 1.2 }} aria-label="Facebook" href={socials.facebook} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors p-2 hover:bg-white/10 rounded-lg">
 						<FacebookIcon />
 					</motion.a>
+				)}
 				</div>
 			</div>
 		</motion.div>

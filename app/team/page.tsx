@@ -19,23 +19,23 @@ import arup from '../../public/team-members/arup.jpeg'
 import saikat from '../../public/team-members/saikat.jpeg'
 
 const domainLeads = [
-	{ name: 'Soham Dutta', domain: 'Graphics, Content & PR Team', imageurl: soham, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/soham-dutta-b6ab62290/", facebook: "" } },
-	{ name: 'Anirban Mukherjee', domain: 'Core Electronics and IOT', imageurl: anirbanMukharjee, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/anirban-mukherjee-0a5917279/", facebook: "" } },
-	{ name: 'Arup Barai', domain: 'Core Electronics and IOT', imageurl: arup, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/arup-barai-214b73290/", facebook: "" } },
-	{ name: 'Anirban Roy', domain: 'AI, ML', imageurl: anirbanRoy, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/anirban-roy-a91666278/", facebook: "" } },
-	{ name: 'Deep Rudra', domain: 'AI, ML', imageurl: deep, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/deeprudra04/", facebook: "" } },
-	{ name: 'Debarghya Panda', domain: 'Mechatronics', imageurl: debarghya, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/debarghya-panda-1a5017291/", facebook: "" } },
-	{ name: 'Susanta Sing', domain: 'Mechatronics', imageurl: sushant, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/susanta-sing-44672b373/", facebook: "" } },
-	{ name: 'Tanmoy_Debnath', domain: 'Mechatronics', imageurl: tanmoy, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/tanmay-debnath-ab3ab6290/", facebook: "" } },
+	{ name: 'Soham Dutta', domain: 'Graphics, Content & PR Team', imageurl: soham, socials: { email: "", linkedin: "https://www.linkedin.com/in/soham-dutta-b6ab62290/", facebook: "" } },
+	{ name: 'Anirban Mukherjee', domain: 'Core Electronics and IOT', imageurl: anirbanMukharjee, socials: { email: "", linkedin: "https://www.linkedin.com/in/anirban-mukherjee-0a5917279/", facebook: "" } },
+	{ name: 'Arup Barai', domain: 'Core Electronics and IOT', imageurl: arup, socials: { email: "", linkedin: "https://www.linkedin.com/in/arup-barai-214b73290/", facebook: "" } },
+	{ name: 'Anirban Roy', domain: 'AI, ML', imageurl: anirbanRoy, socials: { email: "", linkedin: "https://www.linkedin.com/in/anirban-roy-a91666278/", facebook: "" } },
+	{ name: 'Deep Rudra', domain: 'AI, ML', imageurl: deep, socials: { email: "", linkedin: "https://www.linkedin.com/in/deeprudra04/", facebook: "" } },
+	{ name: 'Debarghya Panda', domain: 'Mechatronics', imageurl: debarghya, socials: { email: "", linkedin: "https://www.linkedin.com/in/debarghya-panda-1a5017291/", facebook: "" } },
+	{ name: 'Susanta Sing', domain: 'Mechatronics', imageurl: sushant, socials: { email: "", linkedin: "https://www.linkedin.com/in/susanta-sing-44672b373/", facebook: "" } },
+	{ name: 'Tanmoy_Debnath', domain: 'Mechatronics', imageurl: tanmoy, socials: { email: "", linkedin: "https://www.linkedin.com/in/tanmay-debnath-ab3ab6290/", facebook: "" } },
 ]
 
 const studentBody = [
 	{ name: 'Agnidipta Basu', role: 'Joint Secretary', imageurl: agni, socials: { email: "agnidiptabasu@gmail.com", linkedin: "https://www.linkedin.com/in/agnidipta-basu/", facebook: "" } },
-	{ name: 'Saikat Panda', role: 'Joint Secretary', imageurl: saikat,  socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/saikat-panda/", facebook: "" }},
+	{ name: 'Saikat Panda', role: 'Joint Secretary', imageurl: saikat,  socials: { email: "", linkedin: "https://www.linkedin.com/in/saikat-panda/", facebook: "" }},
 	{ name: 'Somaraho Chaudhury', role: 'Additional Joint Secretary', imageurl: somaroho, socials: { email: "chaudhurysomaraho@gmail.com", linkedin: "https://www.linkedin.com/in/somaraho-chaudhury-17368025a/", facebook: "" } },
 	{ name: 'Anisha Patra', role: 'Additional Joint Secretary', imageurl: anisha, socials: { email: "saananishapatra@gmail.com", linkedin: "https://www.linkedin.com/in/anisha-patra-b46483263/", facebook: "" } },
 	{ name: 'Debamrita Paul', role: 'Additional Joint Secretary', imageurl: debamrita, socials: { email: "imdebamrita@gmail.com", linkedin: "https://www.linkedin.com/in/imdebamritapaul/", facebook: "" } },
-	{ name: 'Sayandip Paul', role: 'Additional Joint Secretary', imageurl: sayandeep, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/sayandip-paul-4b66aa220/", facebook: "" } },
+	{ name: 'Sayandip Paul', role: 'Additional Joint Secretary', imageurl: sayandeep, socials: { email: "", linkedin: "https://www.linkedin.com/in/sayandip-paul-4b66aa220/", facebook: "" } },
 ]
 
 const containerVariants = {
