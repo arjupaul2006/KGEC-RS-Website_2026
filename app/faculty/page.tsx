@@ -8,12 +8,49 @@ import satyandra from "../../public/faculty/satyandra.png";
 import souvik from "../../public/faculty/souvik.png";
 import aritra from "../../public/faculty/aritra.jpeg";
 import Link from "next/link";
+import { off } from "process";
 
 const faculty = [
-  { name: "Dr. Sourav Kumar Das", role: "Principal", imageurl: souvik },
-  { name: "Dr. Satyendra Nath Mandal", role: "Chairman", imageurl: satyandra },
-  { name: "Dr. Sandip Nandi", role: "Secretary", imageurl: sandip },
-  { name: "Dr. Aritra Acharya", role: "Treasurer", imageurl: aritra },
+  {
+    name: "Dr. Sourav Kumar Das",
+    role: "Principal",
+    imageurl: souvik,
+    dept: "HOD, Humanities",
+    email: "sourabhkumardas@gmail.com",
+    office: 'Kalyani Government Engineering College, West Bengal',
+    office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
+    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+  },
+  {
+    name: "Dr. Satyendra Nath Mandal",
+    role: "Chairman",
+    imageurl: satyandra,
+    dept: "Faculty, Information Technology",
+    email: "satyenkgec@gmail.com",
+    office: 'Kalyani Government Engineering College, West Bengal',
+    office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
+    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+  },
+  {
+    name: "Dr. Sandip Nandi",
+    role: "Secretary",
+    imageurl: sandip,
+    dept: "Faculty, Electronics and Communication Engineering",
+    email: "sandip622@gmail.com",
+    office: 'Kalyani Government Engineering College, West Bengal',
+    office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
+    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+  },
+  {
+    name: "Dr. Aritra Acharya",
+    role: "Treasurer",
+    imageurl: aritra,
+    dept: "Computer Science",
+    email: "sourabhkumardas@gmail.com",
+    office: 'Kalyani Government Engineering College, West Bengal',
+    office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
+    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+  },
 ];
 
 const containerVariants = {
@@ -86,6 +123,11 @@ export default function Faculty() {
                     name: f.name,
                     role: f.role,
                     image: f.imageurl.src,
+                    dept: f.dept,
+                    email: f.email,
+                    office: f.office,
+                    office_hours: f.office_hours,
+                    biography: f.biography,
                   },
                 }}
               >

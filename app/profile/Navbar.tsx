@@ -20,13 +20,6 @@ export default function Navbar() {
           <p className="text-xs text-gray-400">Academic Excellence</p>
         </div>
       </div>
-      <div className="hidden md:flex items-center gap-8">
-        {navItems.map((item) => (
-          <a key={item.name} href="#" className="flex items-center gap-2 hover:text-cyan-400 transition-colors text-sm font-medium">
-            {item.icon} {item.name}
-          </a>
-        ))}
-      </div>
     </nav>
   );
 }

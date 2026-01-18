@@ -2,7 +2,7 @@
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import Image from 'next/image';
 
-export default function ProfileHeader({name, role, image}: {name: string, role: string, image?: any}) {
+export default function ProfileHeader({name, role, image, dept, email, office, office_hours}: {name: string, role: string, image?: any, dept?: string, email?: string, office?: string, office_hours?: string}) {
   return (
     <div className="relative overflow-hidden rounded-2xl bg-[#1e293b] mt-8 mx-8 border border-slate-700/50">
       {/* Background Gradient Accent */}
@@ -20,14 +20,14 @@ export default function ProfileHeader({name, role, image}: {name: string, role: 
         <div className="flex-1 text-center md:text-left z-10">
           <h1 className="text-3xl font-bold text-white mb-2">{name}</h1>
           <p className="text-cyan-400 font-medium text-lg mb-1">{role}</p>
-          <p className="text-slate-400">Department of Computer Science & Engineering</p>
+          <p className="text-slate-400">{dept}</p>
 
           {/* Contact Info Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-            <ContactItem icon={<Mail size={20} />} label="Email" value="sarah.mitchell@university.edu" isLink />
-            <ContactItem icon={<Phone size={20} />} label="Phone" value="+1 (555) 123-4567" />
-            <ContactItem icon={<MapPin size={20} />} label="Office" value="Engineering Building, Room 305" />
-            <ContactItem icon={<Clock size={20} />} label="Office Hours" value="Mon & Wed 2:00 PM - 4:00 PM" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-15 mt-10">
+            <ContactItem icon={<Mail size={20} />} label="Email" value={email} isLink />
+            {/* <ContactItem icon={<Phone size={20} />} label="Phone" value="+1 (555) 123-4567" /> */}
+            <ContactItem icon={<MapPin size={20} />} label="Office" value={office} />
+            <ContactItem icon={<Clock size={20} />} label="Office Hours" value={office_hours} />
           </div>
         </div>
       </div>

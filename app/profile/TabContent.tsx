@@ -6,13 +6,29 @@ import Contacts from "./Contacts";
 import { TabName } from "./TabMenu";
 import { JSX } from "react";
 
-const TAB_COMPONENTS: Record<TabName, JSX.Element> = {
-  Biography: <Biography />,
-  Degrees: <Degrees />,
-  Publications: <Publications />,
-  Contacts: <Contacts />
+type TabProps = {
+  biography?: string;
 };
 
-export default function TabContent({ activeTab }: { activeTab: TabName }) {
-  return <div className="mt-6">{TAB_COMPONENTS[activeTab]}</div>;
+const TAB_COMPONENTS: Record<TabName, (props: TabProps) => JSX.Element> = {
+  Biography: (props) => <Biography biography={props.biography} />,
+  Degrees: (props) => <Degrees />,
+  Publications: (props) => <Publications />,
+  Contacts: (props) => <Contacts />,
+};
+
+export default function TabContent({
+  activeTab,
+  biography,
+}: {
+  activeTab: TabName;
+  biography?: string;
+}) {
+  const ActiveComponent = TAB_COMPONENTS[activeTab];
+
+  return (
+    <div className="mt-6">
+      <ActiveComponent biography={biography} />
+    </div>
+  );
 }

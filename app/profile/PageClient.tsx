@@ -13,6 +13,11 @@ type SearchParams = {
   name?: string;
   role?: string;
   image?: string;
+  dept?: string;
+  email?: string;
+  office?: string;
+  office_hours?: string;
+  biography?: string;
 };
 
 export default function ClientTab({
@@ -24,15 +29,21 @@ export default function ClientTab({
   const name = searchParams?.name ?? "";
   const role = searchParams?.role ?? "";
   const image = searchParams?.image ? decodeURIComponent(searchParams.image) : "";
+  const dept = searchParams?.dept ?? "";
+  const email = searchParams?.email ?? "";
+  const office = searchParams?.office ?? "";
+  const office_hours = searchParams?.office_hours ?? ""; 
+  const biography = searchParams?.biography ?? "";
+
+
   const [activeTab, setActiveTab] = useState<TabName>("Biography");
 
-  console.log(name, role, image);
   return (
     <main className="min-h-screen bg-[#0f172a] pb-20">
       <Navbar />
-      <ProfileHeader name={name} role={role} image={image} />
+      <ProfileHeader name={name} role={role} image={image} dept={dept} email={email} office={office} office_hours={office_hours} />
       <TabMenu activeTab={activeTab} setActiveTab={setActiveTab} />
-      <TabContent activeTab={activeTab} />
+      <TabContent activeTab={activeTab} biography={biography} />
     </main>
   );
 }
