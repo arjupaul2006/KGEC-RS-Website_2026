@@ -8,25 +8,33 @@ import somaroho from '../../public/team-members/somaroho.jpeg'
 import debamrita from '../../public/team-members/debamrita.jpeg'
 import sayandeep from '../../public/team-members/sayandeep.jpeg'
 import anisha from '../../public/team-members/anisha.jpeg'
+import deep from '../../public/team-members/diprudra.jpeg'
+import anirbanMukharjee from '../../public/team-members/anirban.jpeg'
+import tanmoy from '../../public/team-members/Tanmoy.jpeg'
+import debarghya from '../../public/team-members/deverko.jpeg'
+import anirbanRoy from '../../public/team-members/anirbanroy.jpeg'
+import sushant from '../../public/team-members/susanth.jpeg'
+import soham from '../../public/team-members/soham.jpeg'
+import arup from '../../public/team-members/arup.jpeg'
 
 const domainLeads = [
-	{ name: 'Soham Dutta', domain: 'Graphics, Content & PR Team' ,imageurl: agni},
-	{ name: 'Anirban Mukherjee', domain: 'Core Electronics and IOT' , imageurl: agni},
-	{ name: 'Arup Barai', domain: 'Core Electronics and IOT' , imageurl: agni},
-	{ name: 'Anirban Roy', domain: 'AI, ML' , imageurl: agni},
-	{ name: 'Deep Rudra', domain: 'AI, ML' , imageurl: agni},
-	{ name: 'Debarghya Panda', domain: 'Mechatronics' , imageurl: agni},
-	{ name: 'Susanta Sing', domain: 'Mechatronics' , imageurl: agni},
-	{ name: 'Tanmoy_Debnath', domain: 'Mechatronics' , imageurl: agni},
+	{ name: 'Soham Dutta', domain: 'Graphics, Content & PR Team', imageurl: soham, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/soham-dutta-b6ab62290/", facebook: "" } },
+	{ name: 'Anirban Mukherjee', domain: 'Core Electronics and IOT', imageurl: anirbanMukharjee, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/anirban-mukharjee-0a5917279/", facebook: "" } },
+	{ name: 'Arup Barai', domain: 'Core Electronics and IOT', imageurl: arup, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/arup-barai-214b73290/", facebook: "" } },
+	{ name: 'Anirban Roy', domain: 'AI, ML', imageurl: anirbanRoy, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/anirban-roy-a91666278/", facebook: "" } },
+	{ name: 'Deep Rudra', domain: 'AI, ML', imageurl: deep, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/deeprudra04/", facebook: "" } },
+	{ name: 'Debarghya Panda', domain: 'Mechatronics', imageurl: debarghya, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/debarghya-panda/", facebook: "" } },
+	{ name: 'Susanta Sing', domain: 'Mechatronics', imageurl: sushant, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/susant-singh-44672b373/", facebook: "" } },
+	{ name: 'Tanmoy_Debnath', domain: 'Mechatronics', imageurl: tanmoy, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/tanmay-debnath-ab3ab6290/", facebook: "" } },
 ]
 
 const studentBody = [
-	{ name: 'Agnidipta Basu', role: 'Joint Secretary' , imageurl: agni},
-	{ name: 'Saikat Panda', role: 'Joint Secretary' , imageurl: agni},
-	{ name: 'Somaraho Chaudhury', role: 'Additional Joint Secretary' , imageurl: somaroho},
-	{ name: 'Anisha Patra', role: 'Additional Joint Secretary' , imageurl: anisha},
-	{ name: 'Debamrita Paul', role: 'Additional Joint Secretary' , imageurl: debamrita},
-	{ name: 'Sayandip Paul', role: 'Additional Joint Secretary' , imageurl: sayandeep},
+	{ name: 'Agnidipta Basu', role: 'Joint Secretary', imageurl: agni },
+	{ name: 'Saikat Panda', role: 'Joint Secretary', imageurl: agni },
+	{ name: 'Somaraho Chaudhury', role: 'Additional Joint Secretary', imageurl: somaroho },
+	{ name: 'Anisha Patra', role: 'Additional Joint Secretary', imageurl: anisha },
+	{ name: 'Debamrita Paul', role: 'Additional Joint Secretary', imageurl: debamrita },
+	{ name: 'Sayandip Paul', role: 'Additional Joint Secretary', imageurl: sayandeep },
 ]
 
 const containerVariants = {
@@ -63,7 +71,7 @@ export default function Team() {
 						animate="visible"
 						className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
 					>
-						{studentBody.map((m)=> (
+						{studentBody.map((m) => (
 							<motion.div key={m.name} variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
 								<MemberCard name={m.name} role={m.role} imageUrl={m.imageurl} />
 							</motion.div>
@@ -86,7 +94,7 @@ export default function Team() {
 						animate="visible"
 						className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
 					>
-						{domainLeads.map((m)=> (
+						{domainLeads.map((m) => (
 							<motion.div key={m.name} variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
 								<MemberCard name={m.name} domain={m.domain} imageUrl={m.imageurl} />
 							</motion.div>
