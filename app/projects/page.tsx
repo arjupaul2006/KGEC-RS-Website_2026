@@ -80,7 +80,7 @@ export default function Projects() {
 					<div className="relative group">
 						<button onClick={()=>currentRef.current?.scrollBy({left:-360, behavior:'smooth'})} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base">‹</button>
 						<button onClick={()=>currentRef.current?.scrollBy({left:360, behavior:'smooth'})} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base">›</button>
-						<div ref={currentRef} className="flex gap-4 sm:gap-6 overflow-x-auto pb-2 scroll-smooth">
+						<div ref={currentRef} className="flex gap-4 sm:gap-6 overflow-x-auto pb-2 scroll-smooth scrollbar-hide">
 							{Array.from({length:8}).map((_,i)=> (
 								<motion.div
 									key={i}
@@ -117,7 +117,7 @@ export default function Projects() {
 					<div className="relative group">
 						<button onClick={()=>pastRef.current?.scrollBy({left:-360, behavior:'smooth'})} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base">‹</button>
 						<button onClick={()=>pastRef.current?.scrollBy({left:360, behavior:'smooth'})} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base">›</button>
-						<div ref={pastRef} className="flex gap-4 sm:gap-6 overflow-x-auto pb-2 scroll-smooth">
+						<div ref={pastRef} className="flex gap-4 sm:gap-6 overflow-x-auto pb-2 scroll-smooth scrollbar-hide">
 							{Array.from({length:12}).map((_,i)=> (
 								<motion.div
 									key={i}

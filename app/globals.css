@@ -8,6 +8,18 @@ canvas + div {
   display: none;
 }
 
+/* Hide scrollbars while keeping scroll functionality */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
 /* @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
