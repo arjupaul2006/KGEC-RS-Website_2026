@@ -8,7 +8,6 @@ import Link from "next/link";
 import Image from "next/image";
 import watermark from "../public/watermark1.png";
 
-
 // Simplified mouse effects - only binary code and inner dot
 const MouseEffects = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -104,7 +103,6 @@ const sampleEvents = [
     date: "April 2026",
     status: "upcoming",
   },
-  
 ];
 
 export default function Home() {
@@ -127,8 +125,7 @@ export default function Home() {
   // small auto-scroll while hovering off the slider for subtle motion
   useEffect(() => {
     const step = () => {
-      if (sliderRef.current)
-        sliderRef.current.scrollBy({ left: 1 });
+      if (sliderRef.current) sliderRef.current.scrollBy({ left: 1 });
     };
   }, []);
 
@@ -277,9 +274,11 @@ export default function Home() {
                     prototyping.
                   </p>
                   <div className="flex justify-end">
-                    <button className="bg-gradient-to-r from-blue-500 to-cyan-400 border-none text-[#022] px-3 py-1.5 rounded-lg cursor-pointer font-bold text-sm hover:shadow-lg transition-shadow">
-                      Details
-                    </button>
+                    <Link href="/events">
+                      <button className="bg-gradient-to-r from-blue-500 to-cyan-400 border-none text-[#022] px-3 py-1.5 rounded-lg cursor-pointer font-bold text-sm hover:shadow-lg transition-shadow">
+                        Details
+                      </button>
+                    </Link>
                   </div>
                 </article>
               ))}
