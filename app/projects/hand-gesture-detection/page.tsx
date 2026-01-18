@@ -83,9 +83,7 @@ const HandGestureUI = () => {
                    alt="MediaPipe skeleton detection visualization"
                    className="w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-700"
                  />
-                 <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 text-[10px] font-bold text-white uppercase tracking-widest">
-                   Vision: STREAMING
-                 </div>
+                 
               </div>
 
               {/* Real-time Telemetry Panel */}
