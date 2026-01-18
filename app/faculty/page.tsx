@@ -9,6 +9,7 @@ import souvik from "../../public/faculty/souvik.png";
 import aritra from "../../public/faculty/aritra.jpeg";
 import Link from "next/link";
 import { off } from "process";
+import { li } from "framer-motion/client";
 
 const faculty = [
   {
@@ -17,9 +18,57 @@ const faculty = [
     imageurl: souvik,
     dept: "HOD, Humanities",
     email: "sourabhkumardas@gmail.com",
-    office: 'Kalyani Government Engineering College, West Bengal',
+    office: "Kalyani Government Engineering College, West Bengal",
     office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
-    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+    biography:
+      "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing.",
+    degrees: [
+      {
+        title: "Doctor of Philosophy",
+        major: "Computer Science & Engineering",
+      },
+      {
+        title: "Master of Science",
+        major: "Artificial Intelligence & Data Science",
+      },
+      { title: "Bachelor of Technology", major: "Information Technology" },
+      { title: "Post Graduate Diploma", major: "Cyber Security" },
+    ],
+    publication: [
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+    ],
+    linkedin:
+      "https://www.linkedin.com/in/dr-aritra-acharyya-4154841b2/?originalSubdomain=in",
+    researchgate: "https://www.researchgate.net/profile/Dr-Das-4",
   },
   {
     name: "Dr. Satyendra Nath Mandal",
@@ -27,9 +76,56 @@ const faculty = [
     imageurl: satyandra,
     dept: "Faculty, Information Technology",
     email: "satyenkgec@gmail.com",
-    office: 'Kalyani Government Engineering College, West Bengal',
+    office: "Kalyani Government Engineering College, West Bengal",
     office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
-    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+    biography:
+      "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing.",
+    degrees: [
+      {
+        title: "Doctor of Philosophy",
+        major: "Computer Science & Engineering",
+      },
+      {
+        title: "Master of Science",
+        major: "Artificial Intelligence & Data Science",
+      },
+      { title: "Bachelor of Technology", major: "Information Technology" },
+      { title: "Post Graduate Diploma", major: "Cyber Security" },
+    ],
+    publication: [
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+    ],
+    linkedin: "https://www.linkedin.com/in/satyendranath-mandal-a0168663/",
+    researchgate: "https://www.researchgate.net/profile/Satyendranath-Mandal",
   },
   {
     name: "Dr. Sandip Nandi",
@@ -37,9 +133,56 @@ const faculty = [
     imageurl: sandip,
     dept: "Faculty, Electronics and Communication Engineering",
     email: "sandip622@gmail.com",
-    office: 'Kalyani Government Engineering College, West Bengal',
+    office: "Kalyani Government Engineering College, West Bengal",
     office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
-    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+    biography:
+      "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing.",
+    degrees: [
+      {
+        title: "Doctor of Philosophy",
+        major: "Computer Science & Engineering",
+      },
+      {
+        title: "Master of Technology",
+        major: "Electronics and Communication Engineering",
+      },
+      { title: "Bachelor of Science", major: "Electronics and Communication Engineering" },
+      { title: "Bachelor of Technology", major: "Electronics and Communication Engineering" },
+    ],
+    publication: [
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+    ],
+    linkedin: "https://www.linkedin.com/in/dr-sandip-nandi-a428782a1/",
+    researchgate: "https://www.researchgate.net/profile/Sandip-Nandi-2",
   },
   {
     name: "Dr. Aritra Acharya",
@@ -47,9 +190,57 @@ const faculty = [
     imageurl: aritra,
     dept: "Computer Science",
     email: "sourabhkumardas@gmail.com",
-    office: 'Kalyani Government Engineering College, West Bengal',
+    office: "Kalyani Government Engineering College, West Bengal",
     office_hours: "Mon - Tue: 10:00 AM - 12:00 PM",
-    biography: "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing."
+    biography:
+      "Assistant Professor of ECE. Specialization: Communication Engineering. Experience - 18 Years. Presently he is working as an Assistant Professor in Higher Education Department, Government of West Bengal since 2009 and now is associated with the Electronics and Communication Engineering department of Kalyani Government Engineering College. He is a Senior Member of IEEE and IEEE GRSS Society. His present research interest includes Wireless Communication, Upper Atmospheric Communication, MIMO, Wave Propagation, Space Science and Remote Sensing.",
+    degrees: [
+      {
+        title: "Doctor of Philosophy",
+        major: "Computer Science & Engineering",
+      },
+      {
+        title: "Master of Science",
+        major: "Artificial Intelligence & Data Science",
+      },
+      { title: "Bachelor of Technology", major: "Information Technology" },
+      { title: "Post Graduate Diploma", major: "Cyber Security" },
+    ],
+    publication: [
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+      {
+        title:
+          "Optimizing Deep Neural Networks for Edge Computing in Healthcare",
+        journal:
+          "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+        year: "October 2025",
+        authors: "S. Mitchell, A. Paul, J. Doe",
+        type: "Journal",
+        isHighlighted: true,
+      },
+    ],
+    linkedin:
+      "https://www.linkedin.com/in/dr-aritra-acharyya-4154841b2/?originalSubdomain=in",
+    researchgate: "https://www.researchgate.net/profile/Sourav-Das-174",
   },
 ];
 
@@ -128,6 +319,10 @@ export default function Faculty() {
                     office: f.office,
                     office_hours: f.office_hours,
                     biography: f.biography,
+                    degrees: JSON.stringify(f.degrees),
+                    publications: JSON.stringify(f.publication),
+                    linkedin: f.linkedin,
+                    researchgate: f.researchgate,
                   },
                 }}
               >

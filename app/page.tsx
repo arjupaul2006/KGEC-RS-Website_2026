@@ -5,6 +5,8 @@ import { useRef, useEffect, useState } from "react";
 import Animation from "./Spline";
 import AnimatedHeading from "./components/AnimatedHeading";
 import Link from "next/link";
+import Image from "next/image";
+import watermark from "../public/watermark.png";
 
 // Component to split text into individual letters for animation
 // const AnimatedText = ({ text, className }: { text: string; className: string }) => {
@@ -168,7 +170,19 @@ export default function Home() {
   return (
     <>
       <MouseEffects />
-      <main className="min-h-screen">
+      {/* IMAGE WATERMARK */}
+      <div className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center">
+        <Image
+          src={watermark}
+          alt="Watermark"
+          width={1000}
+          height={1000}
+          className="opacity-[0.05] rotate-[0deg]"
+          priority
+        />
+      </div>
+
+      <main className="relative z-10 min-h-screen">
         {/* Hero */}
         <header className="flex items-center justify-center py-12">
           <div className="flex gap-8 items-center w-full max-w-6xl px-6 flex-col lg:flex-row">
@@ -188,7 +202,10 @@ export default function Home() {
               </motion.p>
 
               <div className="flex gap-3 items-center mt-4 flex-col sm:flex-row">
-                <Link href="mailto:arjupaul2006@gmail.com" className="w-full sm:w-auto">
+                <Link
+                  href="mailto:arjupaul2006@gmail.com"
+                  className="w-full sm:w-auto"
+                >
                   <motion.button
                     whileHover={{
                       scale: 1.05,

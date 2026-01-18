@@ -1,3 +1,4 @@
+import { degrees } from "framer-motion";
 import ClientTabs from "./PageClient";
 
 interface ProfileProps {
@@ -9,6 +10,10 @@ interface ProfileProps {
   office?: string;
   office_hours?: string;
   biography?: string;
+  degrees?: string;
+  publications?: string;
+  linkedin?: string;
+  researchgate?: string;
 }
 
 export default async function Page({
@@ -18,6 +23,7 @@ export default async function Page({
 }) {
 
   const params = await searchParams;
+  
 
   return <ClientTabs searchParams={params} />;
 }
