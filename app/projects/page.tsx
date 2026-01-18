@@ -4,6 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import AnimatedHeading from "../components/AnimatedHeading";
 import Link from "next/link";
+import Image from "next/image";
+import iroc_24 from "../../public/projects/iroc-24.png";
+import iroc_25 from "../../public/projects/iroc-25.png";
+import dunerover from "../../public/projects/dunerover.jpeg";
 
 export default function Projects() {
   const [query, setQuery] = useState("");
@@ -18,27 +22,30 @@ export default function Projects() {
 
   const currentProjects = [
     {
-      title: "Rover Project 2025",
+      title: "Dune Rover Revival Project",
       status: "In Progress",
       year: "2025",
       team: "DuneRover Team",
       details: "/projects/rover25",
+      img: dunerover,
     },
     {
-      title: "Drone Project 2025",
+      title: "IRoC-U 25",
       status: "In Progress",
       year: "2025",
-      team: "DroneX Team",
+      team: "Garunveer Team",
       details: "/projects/rover25",
+      img: iroc_25,
     },
   ];
   const pastProjects = [
     {
-      title: "Rover Project 2024",
+      title: "IRoC-U 24",
       status: "Completed",
       year: "2024",
       team: "DuneRover Team",
       details: "/projects/rover24",
+      img: iroc_24,
     },
     {
       title: "Air Quality Monitoring System",
@@ -46,6 +53,7 @@ export default function Projects() {
       year: "2025",
       team: ["Arju", "Swastik", "Sristy"],
       details: "/projects/air-quality-monitor",
+      img: iroc_24,
     },
     {
       title: "Automated Medicine Dispenser",
@@ -53,6 +61,7 @@ export default function Projects() {
       year: "2025",
       team: ["Eve", "Frank"],
       details: "/projects/automated-medicine",
+      img: iroc_24,
     },
     {
       title: "Fire Fighting Bot",
@@ -60,6 +69,7 @@ export default function Projects() {
       year: "2025",
       team: ["Eve", "Frank"],
       details: "/projects/fire-fighting-bot",
+      img: iroc_24,
     },
     {
       title: "Hand Gesture Detection",
@@ -67,6 +77,7 @@ export default function Projects() {
       year: "2025",
       team: ["Eve", "Frank"],
       details: "/projects/hand-gesture-detection",
+      img: iroc_24,
     },
   ];
 
@@ -263,8 +274,10 @@ export default function Projects() {
                     className="shrink-0 w-72 sm:w-80 bg-white/2 border border-white/6 rounded-xl hover:border-cyan-400/50 transition-all duration-300 p-4 sm:p-6"
                   >
                     <div
-                      className={`h-36 sm:h-40 bg-gradient-to-br ${projectIndex % 3 === 0 ? "from-cyan-500/20 to-blue-500/20" : projectIndex % 3 === 1 ? "from-blue-500/20 to-purple-500/20" : "from-green-500/20 to-cyan-500/20"} rounded-lg border border-white/10`}
-                    />
+                      className={`relative h-36 sm:h-40 bg-gradient-to-br ${projectIndex % 3 === 0 ? "from-cyan-500/20 to-blue-500/20" : projectIndex % 3 === 1 ? "from-blue-500/20 to-purple-500/20" : "from-green-500/20 to-cyan-500/20"} rounded-lg border border-white/10`}
+                    >
+                      <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4"/>
+                    </div>
                     <div className="mt-4 font-semibold text-white text-sm sm:text-base">
                       {p.title}
                     </div>
@@ -329,8 +342,10 @@ export default function Projects() {
                     className="shrink-0 w-72 sm:w-80 bg-white/2 border border-white/6 rounded-xl hover:border-cyan-400/50 transition-all duration-300 p-4 sm:p-6"
                   >
                     <div
-                      className={`h-32 sm:h-36 bg-gradient-to-br ${projectIndex % 3 === 0 ? "from-cyan-500/20 to-blue-500/20" : projectIndex % 3 === 1 ? "from-blue-500/20 to-purple-500/20" : "from-green-500/20 to-cyan-500/20"} rounded-lg border border-white/10`}
-                    />
+                      className={`relative h-32 sm:h-36 bg-gradient-to-br ${projectIndex % 3 === 0 ? "from-cyan-500/20 to-blue-500/20" : projectIndex % 3 === 1 ? "from-blue-500/20 to-purple-500/20" : "from-green-500/20 to-cyan-500/20"} rounded-lg border border-white/10`}
+                    >
+                      <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4"/>
+                    </div>
                     <div className="mt-4 font-semibold text-white text-sm sm:text-base">
                       {p.title}
                     </div>

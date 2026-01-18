@@ -6,7 +6,7 @@ import Animation from "./Spline";
 import AnimatedHeading from "./components/AnimatedHeading";
 import Link from "next/link";
 import Image from "next/image";
-import watermark from "../public/watermark.png";
+import watermark from "../public/watermark1.png";
 
 
 // Simplified mouse effects - only binary code and inner dot
@@ -89,14 +89,14 @@ const sampleEvents = [
   {
     title: "Robo Soccar",
     type: "Tech Fest Competition",
-    date: "2024-05-10",
-    status: "March 2026",
+    date: "March 2026",
+    status: "upcoming",
   },
   {
     title: "Turbulence",
     type: "Tech Fest Competition",
-    date: "2024-08-25",
-    status: "March 2026",
+    date: "March 2026",
+    status: "upcoming",
   },
   {
     title: "Zyro",
@@ -142,7 +142,7 @@ export default function Home() {
           alt="Watermark"
           width={500}
           height={500}
-          className="opacity-10 rotate-[0deg]"
+          className="opacity-50 rotate-[0deg]"
           priority
         />
       </div>
