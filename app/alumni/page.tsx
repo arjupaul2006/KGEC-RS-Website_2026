@@ -2,16 +2,433 @@
 
 import { motion } from 'framer-motion'
 import AnimatedHeading from '../components/AnimatedHeading';
-
-type AlumniItem = { name: string; role?: string }
+import SocialButtons from '../components/SocialButtons';
+type Social={
+	platform:string;
+	link:string;
+}
+type AlumniItem = { name: string; image?: string ,socials:Social[] }
 
 const years: { year: number; people: AlumniItem[] }[] = [
-	{ year: 2025, people: Array.from({ length: 6 }).map((_, i) => ({ name: `Alumni 2025 - ${i+1}` })) },
-	{ year: 2024, people: Array.from({ length: 6 }).map((_, i) => ({ name: `Alumni 2024 - ${i+1}` })) },
-	{ year: 2023, people: Array.from({ length: 6 }).map((_, i) => ({ name: `Alumni 2023 - ${i+1}` })) },
-	{ year: 2022, people: Array.from({ length: 6 }).map((_, i) => ({ name: `Alumni 2022 - ${i+1}` })) },
-	{ year: 2021, people: Array.from({ length: 6 }).map((_, i) => ({ name: `Alumni 2021 - ${i+1}` })) },
-	{ year: 2020, people: Array.from({ length: 6 }).map((_, i) => ({ name: `Alumni 2020 - ${i+1}` })) },
+	{ 
+		year: 2025,
+		people:[
+			{
+               name:"Aritra Biswas",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/aritra-biswas-80566b239/"
+				}
+			   ]
+			},
+			{
+               name:"Sayak Jana",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/sayak-jana-06ab55224/"
+				}
+			   ]
+			},
+			{
+               name:"Ayush Kumar Sharma",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/ayush-kumar-sharma-0499b1232/"
+				}
+			   ]
+			},
+			{
+               name:"Ajarul Miah",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/ajarul-miah-bb2bbb254/"
+				}
+			   ]
+			},
+			{
+               name:"Sk Iftikar Uddin",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"Souradeep Bera",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/souradeep-bera-622836224/"
+				},
+				
+			   ]
+			},
+			
+		]
+	 },
+	{ 
+		year: 2024,
+		people:[
+			{
+               name:"Partha Singha Roy",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/parthasingharoy/"
+				}
+			   ]
+			},
+			{
+               name:"Ayandip Garai",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/ayan2601/"
+				}
+			   ]
+			},
+			{
+               name:"Swarbajit Goswami",
+			   image:'',
+               socials:[
+				{
+					platform:"facebook",
+					link:"https://www.facebook.com/share/19MNK3B2ih/"
+				}
+			   ]
+			},
+			{
+               name:"Ahana biswas",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/ahana-biswas-7aa1a2202/"
+				}
+			   ]
+			},
+			{
+               name:"Kanchan kumar kaiti",
+			   image:'',
+               socials:[
+				{
+					platform:"facebook",
+					link:"https://www.facebook.com/share/1CCJPBZAiF/"
+				}
+			   ]
+			},
+			{
+               name:"Sunirban ranjit",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/s-ranjit/"
+				}
+			   ]
+			},
+			{
+               name:"Arnab Kr. Das",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/thearnabkumardas/"
+				}
+			   ]
+			},
+			
+		]
+	 },
+	{ 
+		year: 2023,
+		people:[
+			{
+               name:"Anindya Kanti Mitra",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/anindyamitra15/"
+				}
+			   ]
+			},
+			{
+               name:"Archisman Das",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/das-archisman-10027001/"
+				}
+			   ]
+			},
+			{
+               name:"Anubhav Dutta ",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/luke-anubis/"
+				}
+			   ]
+			},
+			{
+               name:"Aryan Mukherjee",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/aryan-mukherjee-a89777217/"
+				}
+			   ]
+			},
+			{
+               name:"Manish Pandey",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/manish-pandey-216302201/"
+				}
+			   ]
+			},
+			{
+               name:"Pritam Mukherjee",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/pmukherjee-556/"
+				}
+			   ]
+			},
+			
+			{
+               name:"Sayan Kundu",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:"https://www.linkedin.com/in/sayan2001/"
+				}
+			   ]
+			},
+			
+		]
+	 },
+	{ 
+		year: 2022,
+		people:[
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			
+		]
+	 },
+	{ 
+		year: 2021,
+		people:[
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			
+		]
+	 },
+	{ 
+		year: 2020,
+		people:[
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			{
+               name:"",
+			   image:'',
+               socials:[
+				{
+					platform:"linkedin",
+					link:""
+				}
+			   ]
+			},
+			
+		]
+	 },
+	
 ]
 
 const containerVariants = {
@@ -73,15 +490,8 @@ export default function Alumni() {
 									>
 										<div className="h-32 sm:h-36 w-full rounded-xl bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 border border-white/10 mb-4" />
 										<div className="font-semibold text-white text-center mb-1 text-sm sm:text-base">{p.name}</div>
-										<div className="text-xs sm:text-sm text-slate-400 text-center mb-4">{p.role ?? 'Alumni'}</div>
-										<div className="flex items-center justify-center gap-3">
-											<button className="p-2 hover:bg-white/10 rounded-lg transition-all duration-300 active:scale-90" aria-label="Email">
-												<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-slate-300 hover:text-cyan-400" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" /></svg>
-											</button>
-											<button className="p-2 hover:bg-white/10 rounded-lg transition-all duration-300 active:scale-90" aria-label="LinkedIn">
-												<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-slate-300 hover:text-cyan-400" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6C1.12 6 0 4.88 0 3.5C0 2.12 1.12 1 2.5 1C3.86 1 4.98 2.12 4.98 3.5ZM0 8H5V24H0V8ZM8 8H12.6V10.1H12.66C13.3 8.92 14.86 7.68 17.12 7.68C21.76 7.68 22.5 10.76 22.5 14.72V24H17.5V15.92C17.5 13.98 17.46 11.5 14.86 11.5C12.22 11.5 11.82 13.62 11.82 15.78V24H6.82V8H8Z" /></svg>
-											</button>
-										</div>
+										
+										<SocialButtons socials={p.socials} />
 									</motion.div>
 								))}
 							</motion.div>
