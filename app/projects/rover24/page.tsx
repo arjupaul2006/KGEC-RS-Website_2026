@@ -15,24 +15,7 @@ export default function DuneRoverDashboard() {
   return (
     <div className="min-h-screen bg-[#0b1120] text-slate-200 p-6 md:p-12 font-sans selection:bg-cyan-500/30">
       
-      {/* Navigation */}
-      <nav className="flex justify-between items-center mb-16 max-w-7xl mx-auto">
-        <div className="flex items-center gap-3">
-          <div className="bg-white p-1 rounded shadow-lg shadow-white/5">
-            <div className="w-8 h-8 bg-slate-900 flex items-center justify-center text-[10px] font-black text-white">
-              KGEC
-            </div>
-          </div>
-          <span className="font-bold text-xl text-white tracking-tight">Robotics Society</span>
-        </div>
-        <div className="hidden lg:flex gap-10 text-sm font-semibold text-slate-400 uppercase tracking-widest">
-          <button className="hover:text-white transition-colors">Home</button>
-          <button className="hover:text-white transition-colors">Team</button>
-          <button className="text-[#38bdf8] border-b-2 border-[#38bdf8] pb-1">Projects</button>
-          <button className="hover:text-white transition-colors">Events</button>
-          <button className="hover:text-white transition-colors">Admin</button>
-        </div>
-      </nav>
+
 
       <main className="max-w-7xl mx-auto flex flex-col gap-16">
 
@@ -46,9 +29,9 @@ export default function DuneRoverDashboard() {
                 <Rocket className="text-[#38bdf8]" size={40} />
               </div>
               <div>
-                <h1 className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tight">
+                <div className="text-9xl md:text-6xl sm:text-9xl font-black text-white mb-2 tracking-tight">
                   Team DuneRover
-                </h1>
+                </div>
                 <div className="flex items-center gap-3 flex-wrap">
                   <span className="bg-[#38bdf8]/10 text-[#38bdf8] px-3 py-1 rounded-full text-xs font-mono font-bold tracking-widest">
                     TEAM ID: 10360

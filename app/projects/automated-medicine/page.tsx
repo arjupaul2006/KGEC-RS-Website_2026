@@ -38,7 +38,7 @@ const MedicineDispenserUI = () => {
             </h3>
             <div className="flex flex-wrap gap-3">
               {teamMembers.map((member) => (
-                <div key={member} className="px-5 py-2 bg-slate-800/50 border border-slate-700 rounded-xl text-sm font-semibold hover:border-emerald-400/50 transition-colors">
+                <div key={member} className="px-5 py-2 bg-slate-800/50 border border-slate-700 rounded-xl text-sm font-semibold hover:border-emerald-400/50 transition-colors p-3">
                   {member}
                 </div>
               ))}

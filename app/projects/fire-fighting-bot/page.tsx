@@ -15,7 +15,7 @@ const FireBotDashboard = () => {
               <Flame className="text-orange-500" size={32} />
             </div>
             <div>
-              <h1 className="text-4xl font-black text-white tracking-tight uppercase italic">
+              <h1 className="text-2xl font-black text-white tracking-tight uppercase italic">
                 Fire Detector Bot
               </h1>
               <p className="text-orange-500 font-mono text-sm tracking-widest">
@@ -37,7 +37,7 @@ const FireBotDashboard = () => {
             </h3>
             <div className="flex flex-wrap gap-3">
               {teamMembers.map((member) => (
-                <div key={member} className="px-5 py-2 bg-slate-800/50 border border-slate-700 rounded-xl text-sm font-semibold hover:border-orange-500/50 transition-colors">
+                <div key={member} className="px-5 py-2 bg-slate-800/50 border border-slate-700 rounded-xl text-sm font-semibold hover:border-orange-500/50 transition-colors p-3">
                   {member}
                 </div>
               ))}

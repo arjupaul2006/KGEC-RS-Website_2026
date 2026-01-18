@@ -16,6 +16,7 @@ import anirbanRoy from '../../public/team-members/anirbanroy.jpeg'
 import sushant from '../../public/team-members/susanth.jpeg'
 import soham from '../../public/team-members/soham.jpeg'
 import arup from '../../public/team-members/arup.jpeg'
+import saikat from '../../public/team-members/saikat.jpeg'
 
 const domainLeads = [
 	{ name: 'Soham Dutta', domain: 'Graphics, Content & PR Team', imageurl: soham, socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/soham-dutta-b6ab62290/", facebook: "" } },
@@ -30,7 +31,7 @@ const domainLeads = [
 
 const studentBody = [
 	{ name: 'Agnidipta Basu', role: 'Joint Secretary', imageurl: agni, socials: { email: "agnidiptabasu@gmail.com", linkedin: "https://www.linkedin.com/in/agnidipta-basu/", facebook: "" } },
-	{ name: 'Saikat Panda', role: 'Joint Secretary', imageurl: agni,  socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/saikat-panda/", facebook: "" }},
+	{ name: 'Saikat Panda', role: 'Joint Secretary', imageurl: saikat,  socials: { email: "abc@gmail.com", linkedin: "https://www.linkedin.com/in/saikat-panda/", facebook: "" }},
 	{ name: 'Somaraho Chaudhury', role: 'Additional Joint Secretary', imageurl: somaroho, socials: { email: "chaudhurysomaraho@gmail.com", linkedin: "https://www.linkedin.com/in/somaraho-chaudhury-17368025a/", facebook: "" } },
 	{ name: 'Anisha Patra', role: 'Additional Joint Secretary', imageurl: anisha, socials: { email: "saananishapatra@gmail.com", linkedin: "https://www.linkedin.com/in/anisha-patra-b46483263/", facebook: "" } },
 	{ name: 'Debamrita Paul', role: 'Additional Joint Secretary', imageurl: debamrita, socials: { email: "imdebamrita@gmail.com", linkedin: "https://www.linkedin.com/in/imdebamritapaul/", facebook: "" } },
