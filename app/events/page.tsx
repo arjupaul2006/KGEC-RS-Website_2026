@@ -6,6 +6,11 @@ import Image from "next/image";
 import ai_ml from "../../public/events/ai-ml.jpeg";
 import recruite from "../../public/events/recruite.jpeg";
 import orientation from "../../public/events/orientation.jpeg";
+import iot from "../../public/events/iot.jpeg"
+import turbulence from "../../public/events/tubulence.png"
+import robosoccar from "../../public/events/robosoccar.png"
+import wrestle from "../../public/events/wrestle.png"
+import zyro from "../../public/events/zyro.png"
 
 const timelineMonths = [
   { month: "January", color: "blue" },
@@ -43,35 +48,35 @@ const sampleEvents = [
     type: "Workshop",
     date: "2026-01-20",
     status: "upcoming",
-    img: ai_ml,
+    img: iot,
   },
   {
     title: "Wrestle Mania",
     type: "Tech Fest Competition",
     date: "March 2026",
     status: "upcoming",
-    img: ai_ml,
+    img: wrestle,
   },
   {
     title: "Robo Soccar",
     type: "Tech Fest Competition",
     date: "March 2026",
     status: "upcoming",
-    img: ai_ml,
+    img: robosoccar,
   },
   {
     title: "Turbulence",
     type: "Tech Fest Competition",
     date: "March 2026",
     status: "upcoming",
-    img: ai_ml,
+    img: turbulence,
   },
   {
     title: "Zyro",
     type: "Hackthon",
     date: "April 2026",
     status: "upcoming",
-    img: ai_ml,
+    img: zyro,
   },
 ];
 

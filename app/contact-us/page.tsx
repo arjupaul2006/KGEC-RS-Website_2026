@@ -33,11 +33,13 @@ export default function ContactUs() {
 
         {/* Contact cards */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <ContactCard
-            icon={<Mail />}
-            title="Email"
-            value="kgec.robotics.club@kgec.edu.in"
-          />
+          <Link href="mailto:kgec.robotics.club@kgec.edu.in">
+            <ContactCard
+              icon={<Mail />}
+              title="Email"
+              value="kgec.robotics.club@kgec.edu.in"
+            />
+          </Link>
 
           <Link
             href="https://www.linkedin.com/company/kgecrs/posts/?feedView=all"
