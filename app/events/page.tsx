@@ -95,7 +95,7 @@ export default function Events() {
         </motion.p>
 
         {/* Horizontal Timeline */}
-        <section className="mt-8 sm:mt-12">
+        {/* <section className="mt-8 sm:mt-12">
           <h3 className="text-lg sm:text-xl font-semibold text-slate-200 mb-6">
             Event Timeline
           </h3>
@@ -126,7 +126,7 @@ export default function Events() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Gallery Carousel */}
         <section className="mt-12 sm:mt-16">
