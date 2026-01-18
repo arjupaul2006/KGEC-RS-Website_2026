@@ -17,6 +17,7 @@ export default function Navbar() {
         { name: 'Faculty', path: '/faculty' },
         { name: 'Alumni', path: '/alumni' },
         { name: 'Admin', path: '/admin' },
+        { name: 'Contact Us', path: '/contact-us' },
     ]
 
     const router = useRouter();

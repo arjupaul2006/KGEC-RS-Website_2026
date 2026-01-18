@@ -8,19 +8,6 @@ import Link from "next/link";
 import Image from "next/image";
 import watermark from "../public/watermark.png";
 
-// Component to split text into individual letters for animation
-// const AnimatedText = ({ text, className }: { text: string; className: string }) => {
-// 	return (
-// 		<span className={`button-letters ${className}`}>
-// 			{text.split('').map((letter, index) => (
-// 				// set a custom property --i per letter so CSS can stagger via calc(var(--i) * ...)
-// 				<span key={index} style={{ ['--i' as any]: index }}>
-// 					{letter === ' ' ? '\u00A0' : letter}
-// 				</span>
-// 			))}
-// 		</span>
-// 	)
-// }
 
 // Simplified mouse effects - only binary code and inner dot
 const MouseEffects = () => {
@@ -88,53 +75,36 @@ const MouseEffects = () => {
 
 const sampleEvents = [
   {
-    title: "Robotics Hackathon 2024",
-    type: "Hackathon",
-    date: "2024-03-15",
+    title: "IOT Workshop",
+    type: "Workshop",
+    date: "2026-01-20",
     status: "upcoming",
   },
   {
-    title: "AI Workshop Series",
-    type: "Workshop",
-    date: "2024-01-20",
-    status: "completed",
+    title: "Wrestle Mania",
+    type: "Tech Fest Competition",
+    date: "March 2026",
+    status: "upcoming",
   },
   {
-    title: "Robotics Competition",
-    type: "Competition",
+    title: "Robo Soccar",
+    type: "Tech Fest Competition",
     date: "2024-05-10",
-    status: "upcoming",
+    status: "March 2026",
   },
   {
-    title: "Tech Expo",
-    type: "Competition",
+    title: "Turbulence",
+    type: "Tech Fest Competition",
     date: "2024-08-25",
-    status: "upcoming",
+    status: "March 2026",
   },
   {
-    title: "Innovation Summit",
-    type: "Other",
-    date: "2024-10-05",
+    title: "Zyro",
+    type: "Hackthon",
+    date: "April 2026",
     status: "upcoming",
   },
-  {
-    title: "Annual Meet",
-    type: "Other",
-    date: "2024-12-15",
-    status: "upcoming",
-  },
-  {
-    title: "Drone Challenge",
-    type: "Competition",
-    date: "2024-06-15",
-    status: "upcoming",
-  },
-  {
-    title: "Automation Workshop",
-    type: "Workshop",
-    date: "2024-04-22",
-    status: "upcoming",
-  },
+  
 ];
 
 export default function Home() {
@@ -158,12 +128,7 @@ export default function Home() {
   useEffect(() => {
     const step = () => {
       if (sliderRef.current)
-        sliderRef.current.scrollBy({ left: 1, behavior: "smooth" });
-      autoScrollRef.current = window.setTimeout(step, 80);
-    };
-    autoScrollRef.current = window.setTimeout(step, 1500);
-    return () => {
-      if (autoScrollRef.current) clearTimeout(autoScrollRef.current);
+        sliderRef.current.scrollBy({ left: 1 });
     };
   }, []);
 
@@ -175,9 +140,9 @@ export default function Home() {
         <Image
           src={watermark}
           alt="Watermark"
-          width={1000}
-          height={1000}
-          className="opacity-[0.05] rotate-[0deg]"
+          width={500}
+          height={500}
+          className="opacity-10 rotate-[0deg]"
           priority
         />
       </div>
@@ -281,7 +246,7 @@ export default function Home() {
 
             <div
               ref={sliderRef}
-              className="flex gap-4 overflow-x-auto py-4 px-2 sm:px-4 scroll-smooth flex-1 scroll-smooth"
+              className="flex gap-4 overflow-x-auto py-4 px-2 sm:px-4 flex-1 "
               role="list"
               tabIndex={0}
             >

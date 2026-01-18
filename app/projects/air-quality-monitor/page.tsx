@@ -1,5 +1,7 @@
 import React from 'react';
 import { Wind, Users, Cpu, Activity, AlertTriangle, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
+import air from "../../../public/projects/air.png"
 
 const AirQualityUI = () => {
   const teamMembers = ["Srishti Singh", "Swastik Sorkar", "Arju Paul"];
@@ -15,7 +17,7 @@ const AirQualityUI = () => {
               <Wind className="text-cyan-400" size={32} />
             </div>
             <div>
-              <h1 className="text-4xl font-black text-white tracking-tight">
+              <h1 className="text-2xl font-black text-white tracking-tight">
                 Air Quality Monitor
               </h1>
               <p className="text-cyan-500 font-mono text-sm uppercase tracking-widest">
@@ -70,8 +72,8 @@ const AirQualityUI = () => {
             
             {/* Project Image Placeholder */}
             <div className="h-2/3 w-full bg-slate-800 relative overflow-hidden">
-               <img 
-                 src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=800" 
+               <Image 
+                 src={air}
                  alt="Sensors and Hardware" 
                  className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
                />
