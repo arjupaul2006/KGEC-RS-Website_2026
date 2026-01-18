@@ -150,9 +150,9 @@ export default function Home() {
           <div className="flex gap-8 items-center w-full max-w-6xl px-6 flex-col lg:flex-row">
             <div className="flex-1 min-w-[260px] w-full">
               <AnimatedHeading
-                text="KGEC Robotics"
+                text="KGEC Robotics Society"
                 level="h1"
-                className="text-[#eaffff] mb-2 text-4xl sm:text-5xl md:text-6xl"
+                className="text-[#eaffff] mb-2 text-3xl sm:text-4xl md:text-5xl"
               />
               <motion.p
                 initial={{ opacity: 0 }}
