@@ -1,18 +1,17 @@
-"use client"
+"use client";
 
-import { redirect } from "next/dist/server/api-utils";
-import { useRouter } from "next/router";
 import React, { useState } from "react";
 // import dotenv from 'dotenv'
-import { navigate } from "next/dist/client/components/segment-cache/navigation";
 // dotenv.config()
 
-
 const LoginPage = () => {
-  // const router = useRouter()
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001/api/auth/login"
+  const BACKEND_URL =
+    process.env.NEXT_PUBLIC_BACKEND_URL ||
+    "http://localhost:3001/api/auth/login";
 
-  console.log("url:", BACKEND_URL)
+  console.log("url:", BACKEND_URL);
+
+  const [error, setError] = useState([]);
 
   const [formData, setFormData] = useState({
     firstname: "",
@@ -23,7 +22,9 @@ const LoginPage = () => {
   });
   // console.log("Form Data:",formData)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -39,14 +40,16 @@ const LoginPage = () => {
 
     const data = await res.json();
 
-    console.log("Form Data:", data)
+    console.log("Form Data:", data);
 
     if (res.ok) {
       // alert("Registration successful ✅");
       window.location.href = "/";
 
     } else {
-      alert(data.errors[0] || "Registration failed ❌");
+      setError(data.errors)
+      console.log(error)
+      // alert(data.errors[0] || "Registration failed ❌");
     }
   };
 
@@ -67,20 +70,37 @@ const LoginPage = () => {
         </div>
 
         {/* Error Message Div */}
-        {/* {error && (
-          <div className="mb-6 flex items-center gap-3 bg-red-500/10 border border-red-500/50 p-4 rounded-xl animate-pulse">
-            <svg className="w-5 h-5 text-red-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <p className="text-red-200 text-sm font-medium">{error}</p>
-            <button 
-              onClick={() => setError(null)} 
-              className="ml-auto text-red-400 hover:text-red-200 transition-colors"
-            >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" /></svg>
-            </button>
-          </div>
-        )} */}
+        {error &&
+          error.map((err) => (
+            <div className="mb-6 flex items-center gap-3 bg-red-500/10 border border-red-500/50 p-4 rounded-xl animate-pulse">
+              <svg
+                className="w-5 h-5 text-red-500 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <p className="text-red-200 text-sm font-medium">{err}</p>
+              <button
+                onClick={() => setError([])}
+                className="ml-auto text-red-400 hover:text-red-200 transition-colors"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" />
+                </svg>
+              </button>
+            </div>
+          ))}
 
         <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
           {/* Name Row */}
