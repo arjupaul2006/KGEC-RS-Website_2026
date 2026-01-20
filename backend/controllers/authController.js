@@ -65,7 +65,7 @@ exports.postLogin = async (req, res, next) => {
 
   res.cookie("isLoggedIn", "true", {
     httpOnly: true,
-    secure: false,
+    secure: true,
     sameSite: "lax",
     maxAge: 24 * 60 * 60 * 1000,
   });
