@@ -51,9 +51,8 @@ const SigninPage = () => {
       
       // window.location.href = "/login";
     } else {
-      setError(data.errors);
-      toast.error("Error Occupied ❌")
-      console.log(error);
+      setError(data.errors)
+      console.log(error)
       // alert(data.errors[0] || "Registration failed ❌");
     }
   };
