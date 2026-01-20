@@ -21,18 +21,18 @@ export default function ContactUs() {
         <div className="absolute bottom-32 left-1/3 w-2 h-2 bg-cyan-300 rounded-full opacity-70" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-28 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28 text-center">
         {/* Heading */}
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
           Contact <span className="text-cyan-400">Us</span>
         </h1>
-        <p className="mt-4 text-gray-300 max-w-xl mx-auto">
+        <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-300 max-w-xl mx-auto px-4">
           Reach out to KGEC Robotics Society for collaborations, events, or
           general queries.
         </p>
 
         {/* Contact cards */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <Link href="mailto:kgec.robotics.club@kgec.edu.in">
             <ContactCard
               icon={<Mail />}
