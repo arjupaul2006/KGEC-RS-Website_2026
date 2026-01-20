@@ -7,6 +7,7 @@ import AnimatedHeading from "./components/AnimatedHeading";
 import Link from "next/link";
 import Image from "next/image";
 import watermark from "../public/watermark1.png";
+import FooterNav from "./Footernav";
 
 // Simplified mouse effects - only binary code and inner dot
 const MouseEffects = () => {
@@ -306,6 +307,8 @@ export default function Home() {
             </button>
           </div>
         </section>
+
+        <FooterNav />
       </main>
 
       <style jsx>{`
