@@ -3,11 +3,31 @@
 import { motion } from 'framer-motion'
 import AnimatedHeading from '../components/AnimatedHeading';
 import SocialButtons from '../components/SocialButtons';
+import partha from '../../public/alumni/partha.png'
+import sorbhajit from '../../public/alumni/Sorbajit.png'
+import kanchan from '../../public/alumni/kanchan.png'
+import ayandip from '../../public/alumni/ayandip.png'
+import ahana from '../../public/alumni/ahana.png'
+import sunirban from '../../public/alumni/sunirban.png'
+import arnab from '../../public/alumni/arnab.png'
+import aritra from '../../public/alumni/aritra.png'
+import sayak from '../../public/alumni/sayak.png'
+import ayush from '../../public/alumni/ayush.png'
+import ajarul from '../../public/alumni/ajarul.png'
+import souradeep from '../../public/alumni/souradeep.png'
+import anindya from '../../public/alumni/anindya.png'
+import archisman from '../../public/alumni/archisman.png'
+import aryan from '../../public/alumni/aryan.png'
+import manish from '../../public/alumni/manish.png'
+import sayan from '../../public/alumni/sayan.png'
+import { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import pritam from '../../public/alumni/pritam.png'
 type Social={
 	platform:string;
 	link:string;
 }
-type AlumniItem = { name: string; image?: string ,socials:Social[] }
+type AlumniItem = { name: string; image?: string | StaticImageData ,socials:Social[] }
 
 const years: { year: number; people: AlumniItem[] }[] = [
 	{ 
@@ -15,7 +35,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 		people:[
 			{
                name:"Aritra Biswas",
-			   image:'',
+			   image:aritra,
                socials:[
 				{
 					platform:"linkedin",
@@ -25,7 +45,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Sayak Jana",
-			   image:'',
+			   image:sayak,
                socials:[
 				{
 					platform:"linkedin",
@@ -35,7 +55,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Ayush Kumar Sharma",
-			   image:'',
+			   image:ayush,
                socials:[
 				{
 					platform:"linkedin",
@@ -45,7 +65,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Ajarul Miah",
-			   image:'',
+			   image:ajarul,
                socials:[
 				{
 					platform:"linkedin",
@@ -65,7 +85,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Souradeep Bera",
-			   image:'',
+			   image:souradeep,
                socials:[
 				{
 					platform:"linkedin",
@@ -82,7 +102,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 		people:[
 			{
                name:"Partha Singha Roy",
-			   image:'',
+			   image:partha,
                socials:[
 				{
 					platform:"linkedin",
@@ -92,7 +112,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Ayandip Garai",
-			   image:'',
+			   image:ayandip,
                socials:[
 				{
 					platform:"linkedin",
@@ -102,7 +122,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Swarbajit Goswami",
-			   image:'',
+			   image:sorbhajit,
                socials:[
 				{
 					platform:"facebook",
@@ -112,7 +132,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Ahana biswas",
-			   image:'',
+			   image:ahana,
                socials:[
 				{
 					platform:"linkedin",
@@ -122,7 +142,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Kanchan kumar kaiti",
-			   image:'',
+			   image:kanchan,
                socials:[
 				{
 					platform:"facebook",
@@ -132,7 +152,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Sunirban ranjit",
-			   image:'',
+			   image:sunirban,
                socials:[
 				{
 					platform:"linkedin",
@@ -142,7 +162,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Arnab Kr. Das",
-			   image:'',
+			   image:arnab,
                socials:[
 				{
 					platform:"linkedin",
@@ -158,7 +178,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 		people:[
 			{
                name:"Anindya Kanti Mitra",
-			   image:'',
+			   image:anindya,
                socials:[
 				{
 					platform:"linkedin",
@@ -168,7 +188,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Archisman Das",
-			   image:'',
+			   image:archisman,
                socials:[
 				{
 					platform:"linkedin",
@@ -188,7 +208,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Aryan Mukherjee",
-			   image:'',
+			   image:aryan,
                socials:[
 				{
 					platform:"linkedin",
@@ -198,7 +218,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Manish Pandey",
-			   image:'',
+			   image:manish,
                socials:[
 				{
 					platform:"linkedin",
@@ -208,7 +228,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			},
 			{
                name:"Pritam Mukherjee",
-			   image:'',
+			   image:pritam,
                socials:[
 				{
 					platform:"linkedin",
@@ -219,7 +239,7 @@ const years: { year: number; people: AlumniItem[] }[] = [
 			
 			{
                name:"Sayan Kundu",
-			   image:'',
+			   image:sayan,
                socials:[
 				{
 					platform:"linkedin",
@@ -488,7 +508,18 @@ export default function Alumni() {
 										whileTap={{ scale: 0.96 }}
 										className="bg-white/2 border border-white/6 rounded-2xl p-4 sm:p-5 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm"
 									>
-										<div className="h-32 sm:h-36 w-full rounded-xl bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 border border-white/10 mb-4" />
+									<div className="h-42 sm:h-56 w-full rounded-xl bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 border border-white/10 mb-4 overflow-hidden">
+										{p.image ? (
+											<Image 
+												src={p.image} 
+												alt={p.name}
+												className="h-full w-full object-cover object-top rounded-xl"
+												priority={false}
+											/>
+										) : (
+											<div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20" />
+										)}
+									</div>
 										<div className="font-semibold text-white text-center mb-1 text-sm sm:text-base">{p.name}</div>
 										
 										<SocialButtons socials={p.socials} />
