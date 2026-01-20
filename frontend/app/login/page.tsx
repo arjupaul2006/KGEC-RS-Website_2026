@@ -1,26 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-// import dotenv from 'dotenv'
-// dotenv.config()
+import Home from "../page";
 
 const LoginPage = () => {
   const BACKEND_URL =
-    process.env.NEXT_PUBLIC_BACKEND_URL ||
-    "http://localhost:3001/api/auth/login";
+    process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
   console.log("url:", BACKEND_URL);
 
   const [error, setError] = useState([]);
 
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
     email: "",
     dept: "",
-    college: "",
   });
-  // console.log("Form Data:",formData)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
@@ -30,24 +24,23 @@ const LoginPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // console.log("Form Data:",formData)
-    const res = await fetch(BACKEND_URL, {
+    const res = await fetch(BACKEND_URL + "/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
+    //   credentials: "include",
     });
 
     const data = await res.json();
 
-    console.log("Form Data:", data);
-
     if (res.ok) {
-      // alert("Registration successful ✅");
-      window.location.href = "/";
+    //   alert("Registration successful ✅");
+      console.log("Login Form Data:", data.isLoggedIn);
+      window.location.href = '/';
+      
     } else {
-      setError(data.errors)
-      console.log(error)
+      setError(data.errors);
+      console.log(error);
       // alert(data.errors[0] || "Registration failed ❌");
     }
   };
@@ -70,8 +63,11 @@ const LoginPage = () => {
 
         {/* Error Message Div */}
         {error &&
-          error.map((err) => (
-            <div className="mb-6 flex items-center gap-3 bg-red-500/10 border border-red-500/50 p-4 rounded-xl animate-pulse">
+          error.map((err, i) => (
+            <div
+              key={i}
+              className="mb-6 flex items-center gap-3 bg-red-500/10 border border-red-500/50 p-4 rounded-xl animate-pulse"
+            >
               <svg
                 className="w-5 h-5 text-red-500 shrink-0"
                 fill="none"
@@ -101,35 +97,8 @@ const LoginPage = () => {
             </div>
           ))}
 
+        {/* Form Data */}
         <form className="space-y-5" onSubmit={handleSubmit}>
-          {/* Name Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-semibold text-slate-400 uppercase mb-1.5 ml-1">
-                First Name
-              </label>
-              <input
-                type="text"
-                name="firstname"
-                onChange={handleChange}
-                placeholder="Nikola"
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder:text-slate-600 outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500/50 transition-all"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-semibold text-slate-400 uppercase mb-1.5 ml-1">
-                Last Name
-              </label>
-              <input
-                type="text"
-                name="lastname"
-                onChange={handleChange}
-                placeholder="Tesla"
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder:text-slate-600 outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500/50 transition-all"
-              />
-            </div>
-          </div>
-
           {/* Email */}
           <div>
             <label className="block text-xs font-semibold text-slate-400 uppercase mb-1.5 ml-1">
@@ -155,6 +124,7 @@ const LoginPage = () => {
                 onChange={handleChange}
                 className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-300 outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500/50 transition-all appearance-none cursor-pointer"
               >
+                <option>Select Department</option>
                 <option value="ME">Mechanical Engineering</option>
                 <option value="CSE">Computer Science & Engineering</option>
                 <option value="ECE">Electronics & Communication</option>
@@ -180,37 +150,14 @@ const LoginPage = () => {
             </div>
           </div>
 
-          {/* College */}
-          <div>
-            <label className="block text-xs font-semibold text-slate-400 uppercase mb-1.5 ml-1">
-              College
-            </label>
-            <input
-              type="text"
-              name="college"
-              onChange={handleChange}
-              placeholder="Kalyani Government Engineering College"
-              className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder:text-slate-600 outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500/50 transition-all"
-            />
-          </div>
-
           {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-sky-500 hover:bg-sky-400 text-[#020617] font-bold py-3.5 rounded-lg mt-6 shadow-lg shadow-sky-500/20 transform transition active:scale-[0.98]"
           >
-            Create Account
+            Login
           </button>
         </form>
-
-        <div className="mt-8 pt-6 border-t border-white/5 text-center">
-          <p className="text-slate-500 text-sm">
-            Already a member?{" "}
-            <a href="#" className="text-sky-400 hover:underline">
-              Log in here
-            </a>
-          </p>
-        </div>
       </div>
     </div>
   );

@@ -129,6 +129,8 @@ export default function Home() {
     };
   }, []);
 
+
+
   return (
     <>
       <MouseEffects />
@@ -164,10 +166,7 @@ export default function Home() {
               </motion.p>
 
               <div className="flex gap-3 items-center mt-4 flex-col sm:flex-row">
-                <Link
-                  href='/join-us'
-                  className="w-full sm:w-auto"
-                >
+                <Link href="/sign-in" className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{
                       scale: 1.05,

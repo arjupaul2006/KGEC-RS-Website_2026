@@ -7,10 +7,10 @@ const authController = require("../controllers/authController");
 
 const authRouter = express.Router();
 
-//import controller
-authRouter.get("/login", authController.getUser);
+//sign-in
+authRouter.get("/sign-in", authController.getUser);
 authRouter.post(
-  "/login", // Express Validator (All Errors for these fields)
+  "/sign-in", // Express Validator (All Errors for these fields)
   [
     body("firstname")
       .trim()
@@ -43,6 +43,25 @@ authRouter.post(
       .withMessage("College must be at least 2 characters long"),
   ],
   authController.postUser,
+);
+
+//login
+authRouter.get("/login", authController.getLogin);
+authRouter.post(
+  "/login",
+  [
+    body("email")
+      .isEmail()
+      .withMessage("Please Enter valid Email")
+      .normalizeEmail(),
+
+    body("dept")
+      .notEmpty()
+      .withMessage("Please select the user type")
+      .isIn(["CSE", "ECE", "ME", "EE", "IT"])
+      .withMessage("Please select correct  dept"),
+  ],
+  authController.postLogin,
 );
 
 // exports.hostRouter = hostRouter
