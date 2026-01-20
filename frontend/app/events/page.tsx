@@ -138,19 +138,18 @@ export default function Events() {
           <h3 className="text-lg sm:text-xl font-semibold text-slate-200 mb-6">
             Event Gallery
           </h3>
-          <div className="overflow-x-auto rounded-xl">
-            <motion.div className="flex gap-4 sm:gap-6 px-15 scroll-smooth">
+          <div className="overflow-x-auto rounded-xl scrollbar-hide">
+            <motion.div className="flex gap-3 sm:gap-4 md:gap-6 px-1 sm:px-2 scroll-smooth">
               {eventGallery.map((e, i) => (
                 <motion.div
                   key={i}
-                  className="shrink-0 w-64 sm:w-72 md:w-80 bg-white/2 border border-white/6 rounded-xl shadow-md overflow-hidden hover:border-cyan-400 transition-all duration-300"
+                  className="shrink-0 w-[280px] sm:w-72 md:w-80 bg-white/2 border border-white/6 rounded-xl shadow-md overflow-hidden hover:border-cyan-400 transition-all duration-300"
                 >
                   <div
-                    className={`relative h-56 sm:h-64 overflow-hidden bg-gradient-to-br ${
-                      i % 2 === 0
+                    className={`relative h-56 sm:h-64 overflow-hidden bg-gradient-to-br ${i % 2 === 0
                         ? "from-blue-100 to-blue-200"
                         : "from-green-100 to-green-200"
-                    }`}
+                      }`}
                   >
                     <Image
                       src={e.img}
@@ -181,7 +180,7 @@ export default function Events() {
           <h3 className="text-lg sm:text-xl font-semibold text-white mb-6 sm:mb-8">
             Featured Events
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
             {sampleEvents.map((e, i) => (
               <motion.div
                 key={e.title}
@@ -193,11 +192,10 @@ export default function Events() {
                 className="bg-white/2 border border-white/6 rounded-xl shadow-md overflow-hidden hover:border-cyan-400 transition-all duration-300"
               >
                 <div
-                  className={`relative h-56 sm:h-64 overflow-hidden bg-gradient-to-br ${
-                    i % 2 === 0
+                  className={`relative h-56 sm:h-64 overflow-hidden bg-gradient-to-br ${i % 2 === 0
                       ? "from-blue-100 to-blue-200"
                       : "from-green-100 to-green-200"
-                  }`}
+                    }`}
                 >
                   <Image src={e.img} alt="ai_ml" fill className="object-fill" />
                 </div>

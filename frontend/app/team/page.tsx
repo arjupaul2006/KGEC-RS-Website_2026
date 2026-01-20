@@ -31,7 +31,7 @@ const domainLeads = [
 
 const studentBody = [
 	{ name: 'Agnidipta Basu', role: 'Joint Secretary', imageurl: agni, socials: { email: "agnidiptabasu@gmail.com", linkedin: "https://www.linkedin.com/in/agnidipta-basu/", facebook: "" } },
-	{ name: 'Saikat Panda', role: 'Joint Secretary', imageurl: saikat,  socials: { email: "", linkedin: "https://www.linkedin.com/in/saikat-panda/", facebook: "" }},
+	{ name: 'Saikat Panda', role: 'Joint Secretary', imageurl: saikat, socials: { email: "", linkedin: "https://www.linkedin.com/in/saikat-panda/", facebook: "" } },
 	{ name: 'Somaraho Chaudhury', role: 'Additional Joint Secretary', imageurl: somaroho, socials: { email: "chaudhurysomaraho@gmail.com", linkedin: "https://www.linkedin.com/in/somaraho-chaudhury-17368025a/", facebook: "" } },
 	{ name: 'Anisha Patra', role: 'Additional Joint Secretary', imageurl: anisha, socials: { email: "saananishapatra@gmail.com", linkedin: "https://www.linkedin.com/in/anisha-patra-b46483263/", facebook: "" } },
 	{ name: 'Debamrita Paul', role: 'Additional Joint Secretary', imageurl: debamrita, socials: { email: "imdebamrita@gmail.com", linkedin: "https://www.linkedin.com/in/imdebamritapaul/", facebook: "" } },
@@ -70,11 +70,11 @@ export default function Team() {
 						variants={containerVariants}
 						initial="hidden"
 						animate="visible"
-						className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+						className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6"
 					>
 						{studentBody.map((m) => (
 							<motion.div key={m.name} variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-								<MemberCard name={m.name} role={m.role} imageUrl={m.imageurl}  socials={m.socials} />
+								<MemberCard name={m.name} role={m.role} imageUrl={m.imageurl} socials={m.socials} />
 							</motion.div>
 						))}
 					</motion.div>
@@ -93,11 +93,11 @@ export default function Team() {
 						variants={containerVariants}
 						initial="hidden"
 						animate="visible"
-						className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+						className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6"
 					>
 						{domainLeads.map((m) => (
 							<motion.div key={m.name} variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
-							<MemberCard name={m.name} domain={m.domain} imageUrl={m.imageurl} socials={m.socials} />
+								<MemberCard name={m.name} domain={m.domain} imageUrl={m.imageurl} socials={m.socials} />
 							</motion.div>
 						))}
 					</motion.div>

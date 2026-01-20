@@ -45,6 +45,7 @@ const LoginPage = () => {
     if (res.ok) {
       // alert("Registration successful ✅");
       window.location.href = "/";
+
     } else {
       setError(data.errors)
       console.log(error)
@@ -53,17 +54,17 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#020617] bg-[radial-gradient(circle_at_top_right,_#0a192f,_#020617)] flex items-center justify-center p-6 font-sans">
+    <div className="min-h-screen bg-[#020617] bg-[radial-gradient(circle_at_top_right,_#0a192f,_#020617)] flex items-center justify-center p-4 sm:p-6 font-sans">
       {/* Background Decorative Element - subtle glow */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-sky-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-      <div className="relative w-full max-w-lg bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
+      <div className="relative w-full max-w-lg bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl">
         {/* Header */}
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold text-white tracking-tight">
+        <div className="text-center mb-8 sm:mb-10">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
             Join the <span className="text-sky-400">Society</span>
           </h1>
-          <p className="text-slate-400 mt-2 text-sm uppercase tracking-widest">
+          <p className="text-slate-400 mt-2 text-xs sm:text-sm uppercase tracking-widest">
             Building the future, one robot at a time
           </p>
         </div>
@@ -101,9 +102,9 @@ const LoginPage = () => {
             </div>
           ))}
 
-        <form className="space-y-5" onSubmit={handleSubmit}>
+        <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
           {/* Name Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-semibold text-slate-400 uppercase mb-1.5 ml-1">
                 First Name
