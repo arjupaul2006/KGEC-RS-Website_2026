@@ -10,7 +10,7 @@ import { navigate } from "next/dist/client/components/segment-cache/navigation";
 
 const LoginPage = () => {
   // const router = useRouter()
-  const BACKEND_URL = "http://" + process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001/api/auth/login"
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001/api/auth/login"
 
   console.log("url:", BACKEND_URL)
 
