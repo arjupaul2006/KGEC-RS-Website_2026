@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import Home from "../page";
 
 const LoginPage = () => {
@@ -10,6 +11,7 @@ const LoginPage = () => {
   console.log("url:", BACKEND_URL);
 
   const [error, setError] = useState([]);
+  const [success, setSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -28,16 +30,15 @@ const LoginPage = () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
-    //   credentials: "include",
+      //   credentials: "include",
     });
 
     const data = await res.json();
 
     if (res.ok) {
-    //   alert("Registration successful ✅");
+      toast.success("Login successful 🎉");
       console.log("Login Form Data:", data.isLoggedIn);
-      window.location.href = '/';
-      
+      window.location.href = "/";
     } else {
       setError(data.errors);
       console.log(error);

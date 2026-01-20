@@ -1,18 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import toast from "react-hot-toast";
 import React, { useState } from "react";
 // import dotenv from 'dotenv'
 // dotenv.config()
 
 const SigninPage = () => {
   const BACKEND_URL =
-    process.env.NEXT_PUBLIC_BACKEND_URL ||
-    "http://localhost:3001";
+    process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
 
   console.log("url:", BACKEND_URL);
 
   const [error, setError] = useState([]);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
     firstname: "",
@@ -44,11 +45,14 @@ const SigninPage = () => {
     console.log("Form Data:", data);
 
     if (res.ok) {
-      // alert("Registration successful ✅");
-      window.location.href = "/login";
+      toast.success("Registration successful 🎉");
+      setShowSuccess(true);
+        window.location.href = "/login";
+      
+      // window.location.href = "/login";
     } else {
-      setError(data.errors)
-      console.log(error)
+      setError(data.errors);
+      console.log(error);
       // alert(data.errors[0] || "Registration failed ❌");
     }
   };
@@ -71,8 +75,11 @@ const SigninPage = () => {
 
         {/* Error Message Div */}
         {error &&
-          error.map((err,i) => (
-            <div key={i} className="mb-6 flex items-center gap-3 bg-red-500/10 border border-red-500/50 p-4 rounded-xl animate-pulse">
+          error.map((err, i) => (
+            <div
+              key={i}
+              className="mb-6 flex items-center gap-3 bg-red-500/10 border border-red-500/50 p-4 rounded-xl animate-pulse"
+            >
               <svg
                 className="w-5 h-5 text-red-500 shrink-0"
                 fill="none"
@@ -101,6 +108,8 @@ const SigninPage = () => {
               </button>
             </div>
           ))}
+
+        
 
         <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
           {/* Name Row */}
