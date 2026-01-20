@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         // enforce a dark background and professional light text across the app
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#071021] text-[#e6f7ff] min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#071021] text-[#e6f7ff] min-h-screen overflow-x-hidden`}
       >
         <Navbar />
         {children}

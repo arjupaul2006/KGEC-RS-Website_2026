@@ -222,7 +222,7 @@ export default function Projects() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-[#071021] via-[#081226] to-[#04121a]">
       <div className="relative max-w-7xl mx-auto px-4 py-8 sm:py-16">
-        <div className="flex items-end justify-between gap-4 mb-8 flex-col sm:flex-row">
+        <div className="flex items-center justify-between gap-3 sm:gap-4 mb-8 flex-col sm:flex-row">
           <AnimatedHeading
             text="Projects"
             level="h2"
@@ -232,7 +232,7 @@ export default function Projects() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search projects"
-            className="w-full sm:w-auto px-4 py-2 rounded-lg bg-white/2 border border-white/6 text-white placeholder-slate-500 focus:border-cyan-400/50 outline-none transition-all duration-300"
+            className="w-full sm:w-64 md:w-auto px-3 sm:px-4 py-2 rounded-lg bg-white/2 border border-white/6 text-white text-sm sm:text-base placeholder-slate-500 focus:border-cyan-400/50 outline-none transition-all duration-300"
           />
         </div>
 
@@ -250,7 +250,7 @@ export default function Projects() {
               onClick={() =>
                 currentRef.current?.scrollBy({ left: -360, behavior: "smooth" })
               }
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-2 md:-translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-base sm:text-lg flex items-center justify-center"
             >
               ‹
             </button>
@@ -258,7 +258,7 @@ export default function Projects() {
               onClick={() =>
                 currentRef.current?.scrollBy({ left: 360, behavior: "smooth" })
               }
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-2 md:translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-base sm:text-lg flex items-center justify-center"
             >
               ›
             </button>
@@ -276,12 +276,12 @@ export default function Projects() {
                     transition={{ delay: projectIndex * 0.05 }}
                     whileHover={{ y: -8, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="shrink-0 w-72 sm:w-80 bg-white/2 border border-white/6 rounded-xl hover:border-cyan-400/50 transition-all duration-300 p-4 sm:p-6"
+                    className="shrink-0 w-[280px] sm:w-72 md:w-80 bg-white/2 border border-white/6 rounded-xl hover:border-cyan-400/50 transition-all duration-300 p-4 sm:p-6"
                   >
                     <div
                       className={`relative h-36 sm:h-40 bg-gradient-to-br ${projectIndex % 3 === 0 ? "from-cyan-500/20 to-blue-500/20" : projectIndex % 3 === 1 ? "from-blue-500/20 to-purple-500/20" : "from-green-500/20 to-cyan-500/20"} rounded-lg border border-white/10`}
                     >
-                      <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4"/>
+                      <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4" />
                     </div>
                     <div className="mt-4 font-semibold text-white text-sm sm:text-base">
                       {p.title}
@@ -318,7 +318,7 @@ export default function Projects() {
               onClick={() =>
                 pastRef.current?.scrollBy({ left: -360, behavior: "smooth" })
               }
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-2 md:-translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-base sm:text-lg flex items-center justify-center"
             >
               ‹
             </button>
@@ -326,7 +326,7 @@ export default function Projects() {
               onClick={() =>
                 pastRef.current?.scrollBy({ left: 360, behavior: "smooth" })
               }
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-sm sm:text-base"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-2 md:translate-x-4 z-10 w-8 sm:w-10 h-8 sm:h-10 bg-white/2 border border-white/6 rounded-full hover:bg-white/4 transition-all duration-300 text-base sm:text-lg flex items-center justify-center"
             >
               ›
             </button>
@@ -344,12 +344,12 @@ export default function Projects() {
                     transition={{ delay: projectIndex * 0.03 }}
                     whileHover={{ y: -8, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="shrink-0 w-72 sm:w-80 bg-white/2 border border-white/6 rounded-xl hover:border-cyan-400/50 transition-all duration-300 p-4 sm:p-6"
+                    className="shrink-0 w-[280px] sm:w-72 md:w-80 bg-white/2 border border-white/6 rounded-xl hover:border-cyan-400/50 transition-all duration-300 p-4 sm:p-6"
                   >
                     <div
                       className={`relative h-32 sm:h-36 bg-gradient-to-br ${projectIndex % 3 === 0 ? "from-cyan-500/20 to-blue-500/20" : projectIndex % 3 === 1 ? "from-blue-500/20 to-purple-500/20" : "from-green-500/20 to-cyan-500/20"} rounded-lg border border-white/10`}
                     >
-                      {p.img && <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4"/>}
+                      {p.img && <Image src={p.img} alt="IRoC-U 24" fill className="object-contain p-4" />}
                     </div>
                     <div className="mt-4 font-semibold text-white text-sm sm:text-base">
                       {p.title}

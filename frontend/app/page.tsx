@@ -139,7 +139,7 @@ export default function Home() {
           alt="Watermark"
           width={500}
           height={500}
-          className="opacity-50 rotate-[0deg]"
+          className="opacity-50 rotate-[0deg] w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
           priority
         />
       </div>
@@ -243,14 +243,14 @@ export default function Home() {
 
             <div
               ref={sliderRef}
-              className="flex gap-4 overflow-x-auto py-4 px-2 sm:px-4 flex-1 "
+              className="flex gap-3 sm:gap-4 overflow-x-auto py-4 px-1 sm:px-2 flex-1 scrollbar-hide"
               role="list"
               tabIndex={0}
             >
               {sampleEvents.map((event, index) => (
                 <article
                   key={index}
-                  className="min-w-64 sm:min-w-72 max-w-80 bg-gradient-to-b from-white/5 to-white/2 rounded-2xl p-4 border border-white/4 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all flex flex-col gap-2.5 scroll-snap-align-start"
+                  className="min-w-[280px] sm:min-w-72 md:min-w-80 max-w-80 bg-gradient-to-b from-white/5 to-white/2 rounded-2xl p-4 border border-white/4 shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all flex flex-col gap-2.5 flex-shrink-0"
                   role="listitem"
                 >
                   <div className="flex justify-between items-center gap-2">
