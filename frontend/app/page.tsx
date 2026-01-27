@@ -166,7 +166,7 @@ export default function Home() {
                 Building the future, one robot at a time
               </motion.p>
 
-              <div className="flex gap-3 items-center mt-4 flex-col sm:flex-row">
+              {/* <div className="flex gap-3 items-center mt-4 flex-col sm:flex-row">
                 <Link href="/sign-in" className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{
@@ -185,7 +185,7 @@ export default function Home() {
                     Explore Events
                   </button>
                 </Link>
-              </div>
+              </div> */}
 
               <ul className="mt-4 flex gap-3 list-none p-0 flex-wrap text-[#9fbcc3] text-xs sm:text-sm">
                 <li className="flex items-center gap-2 bg-white/2 px-2.5 py-1.5 rounded-lg">
